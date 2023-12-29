@@ -1,0 +1,14 @@
+.AppShell {
+  display: flex;
+  flex-direction: column;
+}
+
+.HeaderSection {
+  width: 100%;
+  height: 90px;
+}
+
+.FooterSection {
+  width: 100%;
+  height: 2000px;
+}

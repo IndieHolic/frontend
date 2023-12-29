@@ -1,0 +1,42 @@
+/* 공용 폰트는 app/layout.tsx에서 정의함 */
+
+:root {
+  --foreground-rgb: 0, 0, 0; /* 텍스트 색상 설정 */
+  --background-rgb: 256, 256, 256; /* 배경 색상 설정 */
+}
+
+/* 사용자 다크 모드 */
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+  html {
+    color-scheme: dark;
+  }
+} */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+}
+
+body {
+  color: rgb(var(--foreground-rgb)); /* 위에서 설정한 텍스트 색상으로 설정 */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.5;
+}
