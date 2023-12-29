@@ -1,0 +1,115 @@
+.Container {
+  position: fixed;
+  width: 100%;
+  height: 90px;
+}
+
+.TopContainer {
+  width: 100%;
+  height: 55px;
+
+  background-color: var(--main);
+}
+
+.BottomContainer {
+  width: 100%;
+  height: 35px;
+
+  border-bottom: 1px solid var(--light-gray);
+  background-color: white;
+}
+
+.Wrapper {
+  display: flex;
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  align-items: center;
+}
+
+.SearchRoot {
+  width: 200px;
+  height: 32px;
+}
+.SearchInput {
+  width: 200px;
+  height: 32px;
+  min-height: 32px;
+  padding-left: 32px;
+  padding-right: 6px;
+
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+  font-family: var(--font-pretendard);
+  color: black;
+}
+.SearchInput::placeholder {
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  font-family: var(--font-pretendard);
+  color: var(--gray-4);
+}
+.SearchSection {
+  width: 32px;
+}
+
+.ImageBellHover {
+  height: 24px;
+}
+.ImageBellHover:hover img {
+  content: url("/images/header/icon-bell-filled.svg");
+}
+
+.ImageUserHover {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.ImageUserHover:hover img {
+  content: url("/images/header/icon-user-filled.svg");
+}
+
+.WhiteMedium14 {
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+  color: white;
+
+  line-height: 1;
+}
+
+.MenuTab {
+  display: flex;
+  height: 26px;
+  padding: 0px 5px;
+
+  border: none;
+  border-radius: 8px;
+
+  align-items: center;
+  gap: 6px;
+}
+.MenuTab:hover {
+  background-color: var(--light-gray);
+}
+
+.BlackSemiBold16 {
+  font-size: 16px;
+  font-weight: var(--font-weight-semi-bold);
+  color: black;
+
+  line-height: 1;
+}
+
+.BlackMedium14 {
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+  color: black;
+
+  line-height: 1;
+}
