@@ -20,7 +20,7 @@ export function Footer() {
             justify="flex-start"
             gap="20px"
           >
-            <Text className={classes.Gray5Bold18}>정보</Text>
+            <Text className={classes.Gray6Bold18}>정보</Text>
             <Stack align="flex-start" justify="flex-start" gap="12px">
               <Link href="/">
                 <Text className={classes.LinkText}>공지사항</Text>
@@ -37,7 +37,7 @@ export function Footer() {
             justify="flex-start"
             gap="20px"
           >
-            <Text className={classes.Gray5Bold18}>구매 관리</Text>
+            <Text className={classes.Gray6Bold18}>구매 관리</Text>
             <Stack align="flex-start" justify="flex-start" gap="12px">
               <Link href="/">
                 <Text className={classes.LinkText}>구매 · 구독 내역</Text>
@@ -57,7 +57,7 @@ export function Footer() {
             justify="flex-start"
             gap="20px"
           >
-            <Text className={classes.Gray5Bold18}>고객센터</Text>
+            <Text className={classes.Gray6Bold18}>고객센터</Text>
             <Stack align="flex-start" justify="flex-start" gap="12px">
               <Link href="/">
                 <Text className={classes.LinkText}>자주묻는 질문</Text>
@@ -74,7 +74,7 @@ export function Footer() {
             justify="flex-start"
             gap="20px"
           >
-            <Text className={classes.Gray5Bold18}>도움말</Text>
+            <Text className={classes.Gray6Bold18}>도움말</Text>
             <Stack align="flex-start" justify="flex-start" gap="12px">
               <Link href="/">
                 <Text className={classes.LinkText}>이용 약관</Text>
@@ -111,20 +111,20 @@ export function Footer() {
               </Group>
             </Group>
             <Stack align="flex-start" justify="flex-start" gap="8px">
-              <Text className={classes.Gray4Regular14}>
-                <Text className={classes.Gray4Bold14} component="span">
+              <Text className={classes.Gray5Regular14}>
+                <Text className={classes.Gray5Bold14} component="span">
                   아고라
                 </Text>{" "}
                 · 대표 김상현
               </Text>
-              <Text className={classes.Gray4Regular14}>주소</Text>
+              <Text className={classes.Gray5Regular14}>주소</Text>
               <Group gap={"4px"}>
-                <Text className={classes.Gray4Regular14}>
+                <Text className={classes.Gray5Regular14}>
                   사업자등록번호 · 통신판매업 신고번호 ·
                 </Text>
                 <Link href="/">
                   <Group gap={"2px"}>
-                    <Text className={classes.Gray4Regular14} td={"underLine"}>
+                    <Text className={classes.Gray5Regular14} td={"underLine"}>
                       사업자정보 확인
                     </Text>
                     <IconExternalLink
@@ -135,9 +135,9 @@ export function Footer() {
                   </Group>
                 </Link>
               </Group>
-              <Text className={classes.Gray4Regular14}>이메일</Text>
+              <Text className={classes.Gray5Regular14}>이메일</Text>
             </Stack>
-            <Text className={classes.Gray2Regular12}>
+            <Text className={classes.Gray3Regular12}>
               아고라는 개별 디지털콘텐츠의 통신판매중개자로 통신판매의 당사자가
               아니며, AGORA 서비스 내 입점한 개별 콘텐츠 제공자가 등록한 상품,
               상품정보, 거래에 관한 일체의 의무와 책임은 각 콘텐츠 제공자에게
