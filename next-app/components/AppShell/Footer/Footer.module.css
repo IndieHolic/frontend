@@ -28,10 +28,10 @@
   padding-top: 32px;
 }
 
-.Gray5Bold18 {
+.Gray6Bold18 {
   font-size: 18px;
   font-weight: var(--font-weight-bold);
-  color: var(--gray-5);
+  color: var(--gray-6);
 
   line-height: 1;
 }
@@ -39,7 +39,7 @@
 .LinkText {
   font-size: 14px;
   font-weight: var(--font-weight-regular);
-  color: var(--gray-4);
+  color: var(--gray-5);
 
   line-height: 1;
 }
@@ -47,26 +47,26 @@
   text-decoration: underline;
 }
 
-.Gray4Regular14 {
+.Gray5Regular14 {
   font-size: 14px;
   font-weight: var(--font-weight-regular);
-  color: var(--gray-4);
+  color: var(--gray-5);
 
   line-height: 1;
 }
 
-.Gray4Bold14 {
+.Gray5Bold14 {
   font-size: 14px;
   font-weight: var(--font-weight-bold);
-  color: var(--gray-4);
+  color: var(--gray-5);
 
   line-height: 1;
 }
 
-.Gray2Regular12 {
+.Gray3Regular12 {
   font-size: 12px;
   font-weight: var(--font-weight-regular);
-  color: var(--gray-2);
+  color: var(--gray-3);
 
   line-height: 1;
 }
