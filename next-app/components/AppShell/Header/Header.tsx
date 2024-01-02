@@ -2,6 +2,7 @@ import classes from "./Header.module.css";
 import { Box, Group, Image, Text } from "@mantine/core";
 import { IconSearch } from "@tabler/icons-react";
 import Link from "next/link";
+import { LogInModal } from "../LogInModal/LogInModal";
 
 export function Header() {
   return (
@@ -42,10 +43,7 @@ export function Header() {
           <Link className={classes.ImageBell} href="/">
             <Image src="/images/header/icon-bell.svg" />
           </Link>
-          <Link href="/" className={classes.ImageUser}>
-            <Image src="/images/header/icon-user.svg" />
-            <Text className={classes.BlackRegular14}>로그인</Text>
-          </Link>
+          <LogInModal />
         </Group>
       </Box>
     </Box>

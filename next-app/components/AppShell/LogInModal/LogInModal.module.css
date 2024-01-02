@@ -1,0 +1,101 @@
+.ModalContent {
+  width: 400px;
+  height: 460px;
+
+  border-radius: 10px;
+
+  flex-basis: 400px;
+}
+.ModalHeader {
+  min-height: 44px;
+  padding: 16px 16px 0px;
+
+  justify-content: flex-end;
+}
+.ModalBody {
+  padding: 0px 36px 25px;
+}
+
+.BlackExtraLight32 {
+  font-size: 32px;
+  font-weight: var(--font-weight-extra-light);
+  color: black;
+
+  line-height: 1;
+}
+
+.TextInputInput {
+  width: 328px;
+  height: 52px;
+  padding: 18px 16px;
+
+  border: none;
+  border-radius: 10px;
+  background-color: var(--gray-1);
+
+  font-size: 16px;
+  font-weight: var(--font-weight-regular);
+  color: black;
+
+  line-height: 1;
+}
+.TextInputInput::placeholder {
+  color: var(--gray-6);
+}
+
+.CheckboxRoot {
+  align-self: flex-start;
+}
+.CheckboxBody {
+  gap: 10px;
+}
+.CheckboxInner svg {
+  top: 5px;
+  left: 4px;
+}
+.CheckboxLabelWrapper {
+  justify-content: center;
+}
+.CheckboxLabel {
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  color: var(--gray-4);
+
+  line-height: 1;
+}
+
+.Button {
+  width: 328px;
+  height: 52px;
+
+  border: none;
+  border-radius: 10px;
+  background-color: var(--main);
+
+  font-size: 20px;
+  font-weight: var(--font-weight-bold);
+  color: white;
+}
+.Button:hover {
+  background-color: var(--main-dark);
+}
+
+.LinkText {
+  font-size: 16px;
+  font-weight: var(--font-weight-regular);
+  color: var(--gray-6);
+
+  line-height: 1;
+}
+.LinkText:hover {
+  text-decoration: underline;
+}
+
+.ImageUser {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.ImageUser:hover img {
+  content: url("/images/header/icon-user-filled.svg");
+}
