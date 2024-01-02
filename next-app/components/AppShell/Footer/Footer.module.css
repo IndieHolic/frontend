@@ -1,0 +1,72 @@
+.Container {
+  position: fixed;
+  width: 100%;
+  height: 424px;
+
+  background-color: var(--light-gray);
+}
+
+.Wrapper {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.TopContainer {
+  display: flex;
+  width: 100%;
+  height: 167px;
+  padding: 32px 0;
+
+  gap: 24px;
+}
+
+.BottomContainer {
+  width: 100%;
+  height: 256px;
+  padding-top: 32px;
+}
+
+.Gray5Bold18 {
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  color: var(--gray-5);
+
+  line-height: 1;
+}
+
+.LinkText {
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  color: var(--gray-4);
+
+  line-height: 1;
+}
+.LinkText:hover {
+  text-decoration: underline;
+}
+
+.Gray4Regular14 {
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  color: var(--gray-4);
+
+  line-height: 1;
+}
+
+.Gray4Bold14 {
+  font-size: 14px;
+  font-weight: var(--font-weight-bold);
+  color: var(--gray-4);
+
+  line-height: 1;
+}
+
+.Gray2Regular12 {
+  font-size: 12px;
+  font-weight: var(--font-weight-regular);
+  color: var(--gray-2);
+
+  line-height: 1;
+}

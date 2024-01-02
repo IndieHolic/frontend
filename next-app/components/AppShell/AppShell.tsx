@@ -1,4 +1,5 @@
 import classes from "./AppShell.module.css";
+import { Footer } from "./Footer/Footer";
 import { Header } from "./Header/Header";
 
 interface AppShellProps {
@@ -11,7 +12,9 @@ export function AppShell({ children }: AppShellProps) {
         <Header />
       </div>
       {children}
-      <div className={classes.FooterSection}></div>
+      <div className={classes.FooterSection}>
+        <Footer />
+      </div>
     </div>
   );
 }
