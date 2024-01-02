@@ -1,6 +1,7 @@
 :root {
   /* Figma의 Color Styles */
   --main: #138bcf;
+  --main-dark: #117ebb;
   --main-light: #44b1ee;
 
   --light-gray: #f7f7f7;
