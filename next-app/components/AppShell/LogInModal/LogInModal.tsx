@@ -37,6 +37,7 @@ export function LogInModal() {
           <Divider color="#E6E6E6" w={"100%"} mt={"25px"} />
           <TextInput
             classNames={{ input: classes.TextInputInput }}
+            data-autofocus
             variant="filled"
             placeholder="아이디"
             mt={"25px"}
@@ -61,19 +62,24 @@ export function LogInModal() {
             mt={"12px"}
           />
 
-          <Button className={classes.Button} variant="filled" mt={"36px"}>
+          <Button
+            className={classes.Button}
+            onClick={close}
+            variant="filled"
+            mt={"36px"}
+          >
             로그인
           </Button>
           <Group gap={"20px"} mt={"52px"}>
-            <Link href="/">
+            <Link onClick={close} href="/">
               <Text className={classes.LinkText}>아이디 찾기</Text>
             </Link>
             <Divider orientation="vertical" color="#E6E6E6" />
-            <Link href="/">
+            <Link onClick={close} href="/">
               <Text className={classes.LinkText}>비밀번호 찾기</Text>
             </Link>
             <Divider orientation="vertical" color="#E6E6E6" />
-            <Link href="/">
+            <Link onClick={close} href="/join-us">
               <Text className={classes.LinkText}>회원가입</Text>
             </Link>
           </Group>
