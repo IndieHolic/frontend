@@ -8,13 +8,9 @@ interface AppShellProps {
 export function AppShell({ children }: AppShellProps) {
   return (
     <div className={classes.AppShell}>
-      <div className={classes.HeaderSection}>
-        <Header />
-      </div>
+      <Header />
       {children}
-      <div className={classes.FooterSection}>
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 }

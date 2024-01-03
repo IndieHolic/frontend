@@ -1,0 +1,159 @@
+.Wrapper {
+  display: flex;
+  flex-direction: column;
+
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 35px 16px 40px;
+
+  gap: 24px;
+}
+
+.BlackExtraLight32 {
+  font-size: 32px;
+  font-weight: var(--font-weight-extra-light);
+  color: black;
+
+  line-height: 1;
+}
+
+.Box {
+  display: flex;
+  flex-direction: column;
+
+  width: 568px;
+}
+
+.TextInputRoot {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.TextInputBox {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 52px;
+  padding: 8px;
+  padding-bottom: 0px;
+
+  border: 1px solid var(--gray-6);
+  border-radius: 10px;
+}
+.TextInputBoxError {
+  border: 1px solid var(--highlight);
+}
+
+.MainSemiBold12 {
+  font-size: 12px;
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--main);
+
+  line-height: 1;
+}
+
+.TextInputInput {
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  color: black;
+
+  line-height: 1;
+}
+.TextInputInput::placeholder {
+  color: var(--gray-5);
+}
+
+.RepetButton {
+  width: 90px;
+  height: 52px;
+
+  border: none;
+  border-radius: 10px;
+  background-color: var(--main);
+
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  color: white;
+}
+.RepetButton:hover {
+  background-color: var(--main-dark);
+}
+
+.MainRegular12 {
+  font-size: 12px;
+  font-weight: var(--font-weight-regular);
+  color: var(--main);
+
+  line-height: 1;
+}
+.HighlightRegular12 {
+  font-size: 12px;
+  font-weight: var(--font-weight-regular);
+  color: var(--highlight);
+
+  line-height: 1;
+}
+.Gray5Regular12 {
+  font-size: 12px;
+  font-weight: var(--font-weight-regular);
+  color: var(--gray-5);
+
+  line-height: 1;
+}
+
+.CheckboxInner svg {
+  top: 5px;
+  left: 4px;
+}
+
+.BlackRegular14 {
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  color: black;
+
+  line-height: 1;
+}
+
+.LinkText {
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  color: var(--main);
+
+  text-decoration: underline;
+  line-height: 1;
+}
+
+.Button {
+  width: 275px;
+  height: 52px;
+
+  border: none;
+  border-radius: 10px;
+  background-color: var(--gray-2);
+
+  font-size: 20px;
+  font-weight: var(--font-weight-regular);
+  color: var(--gray-6);
+
+  align-self: center;
+}
+.ButtonActive {
+  background-color: var(--main);
+
+  font-weight: var(--font-weight-bold);
+  color: white;
+}
+.ButtonActive:hover {
+  background-color: var(--main-dark);
+}
+
+.BlackExtraLight24 {
+  font-size: 24px;
+  font-weight: var(--font-weight-extra-light);
+  color: black;
+
+  line-height: 1;
+}
