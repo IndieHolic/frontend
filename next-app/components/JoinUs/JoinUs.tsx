@@ -10,6 +10,7 @@ import {
   Button,
   TextInput,
 } from "@mantine/core";
+import { EmailVerifyModal } from "./EmailVerifyModal/EmailVerifyModal";
 
 export function JoinUs() {
   return (
@@ -20,47 +21,155 @@ export function JoinUs() {
         <Box className={classes.Box}>
           {/* 입력 오총사 */}
           <Stack gap={"20px"}>
-            <TextInputBox
-              title="아이디"
-              placeholder="아이디를 입력해 주세요."
-              isCheckButton={true}
-              isCheck={false}
-              isError={false}
-              checkMessage="* 사용 가능한 아이디입니다."
-              errorMessage="* 이미 사용된 아이디이거나 형식이 올바르지 않습니다."
-              message="(영문소문자/숫자, 4~16글자)"
-            />
-            <TextInputBox
-              title="이메일"
-              placeholder="이메일을 입력해 주세요."
-              isCheck={false}
-              isError={false}
-              checkMessage="* 사용 가능한 이메일입니다."
-              errorMessage="* 이미 사용된 이메일이거나 형식이 올바르지 않습니다."
-            />
-            <TextInputBox
-              title="비밀번호"
-              placeholder="비밀번호를 입력해 주세요."
-              isError={false}
-              errorMessage="* 비밀번호 형식이 올바르지 않습니다."
-              message="(영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10~16글자)"
-            />
-            <TextInputBox
-              title="비밀번호 확인"
-              placeholder="비밀번호를 다시 입력해 주세요."
-              isError={false}
-              errorMessage="* 비밀번호가 일치하지 않습니다."
-            />
-            <TextInputBox
-              title="닉네임"
-              placeholder="닉네임을 입력해 주세요."
-              isCheckButton={true}
-              isCheck={false}
-              isError={false}
-              checkMessage="* 사용 가능한 닉네임입니다."
-              errorMessage="* 이미 사용된 닉네임이거나 형식이 올바르지 않습니다."
-              message="(2~16글자)"
-            />
+            {/* 아이디 입력 박스 */}
+            <Box className={classes.TextInputRoot}>
+              <Group gap={"12px"}>
+                <Box
+                  className={`${classes.TextInputBox} ${
+                    false && classes.TextInputBoxError
+                  }`}
+                >
+                  <Text className={classes.MainSemiBold12}>아이디</Text>
+                  <TextInput
+                    classNames={{ input: classes.TextInputInput }}
+                    variant="unstyled"
+                    size="xs"
+                    placeholder="아이디를 입력하세요."
+                  />
+                </Box>
+                <Button className={classes.RepetButton}>중복 확인</Button>
+              </Group>
+              {/* 안내 메세지 */}
+              <Group gap={"2px"} pl={"9px"}>
+                {false && (
+                  <Text className={classes.MainRegular12}>
+                    * 사용 가능한 아이디입니다.
+                  </Text>
+                )}
+                {false && (
+                  <Text className={classes.HighlightRegular12}>
+                    * 이미 사용된 아이디이거나 형식이 올바르지 않습니다.
+                  </Text>
+                )}
+                <Text className={classes.Gray5Regular12}>
+                  (영문소문자/숫자, 4~16글자)
+                </Text>
+              </Group>
+            </Box>
+            {/* 이메일 입력 박스 */}
+            <Box className={classes.TextInputRoot}>
+              <Group gap={"12px"}>
+                <Box
+                  className={`${classes.TextInputBox} ${
+                    false && classes.TextInputBoxError
+                  }`}
+                >
+                  <Text className={classes.MainSemiBold12}>이메일</Text>
+                  <TextInput
+                    classNames={{ input: classes.TextInputInput }}
+                    variant="unstyled"
+                    size="xs"
+                    placeholder="이메일을 입력하세요."
+                  />
+                </Box>
+                {/* 이메일 인증 버튼 */}
+                <EmailVerifyModal />
+              </Group>
+              {/* 안내 메세지 */}
+              <Group gap={"2px"} pl={"9px"}>
+                {false && (
+                  <Text className={classes.HighlightRegular12}>
+                    * 이메일 인증을 해 주세요.
+                  </Text>
+                )}
+              </Group>
+            </Box>
+            {/* 비밀번호 입력 박스 */}
+            <Box className={classes.TextInputRoot}>
+              <Box
+                className={`${classes.TextInputBox} ${
+                  false && classes.TextInputBoxError
+                }`}
+              >
+                <Text className={classes.MainSemiBold12}>비밀번호</Text>
+                <TextInput
+                  classNames={{ input: classes.TextInputInput }}
+                  variant="unstyled"
+                  size="xs"
+                  placeholder="비밀번호를 입력하세요."
+                />
+              </Box>
+              {/* 안내 메세지 */}
+              <Group gap={"2px"} pl={"9px"}>
+                {false && (
+                  <Text className={classes.HighlightRegular12}>
+                    * 비밀번호 형식이 올바르지 않습니다.
+                  </Text>
+                )}
+                <Text className={classes.Gray5Regular12}>
+                  (영문 대소문자/숫자/특수문자 중 2가지 이상 조합, 10~16글자)
+                </Text>
+              </Group>
+            </Box>
+            {/* 비밀번호 확인 입력 박스 */}
+            <Box className={classes.TextInputRoot}>
+              <Group gap={"12px"}>
+                <Box
+                  className={`${classes.TextInputBox} ${
+                    false && classes.TextInputBoxError
+                  }`}
+                >
+                  <Text className={classes.MainSemiBold12}>비밀번호 확인</Text>
+                  <TextInput
+                    classNames={{ input: classes.TextInputInput }}
+                    variant="unstyled"
+                    size="xs"
+                    placeholder="비밀번호를 다시 입력하세요."
+                  />
+                </Box>
+              </Group>
+              {/* 안내 메세지 */}
+              <Group gap={"2px"} pl={"9px"}>
+                {false && (
+                  <Text className={classes.HighlightRegular12}>
+                    * 비밀번호가 일치하지 않습니다.
+                  </Text>
+                )}
+              </Group>
+            </Box>
+            {/* 닉네임 입력 박스 */}
+            <Box className={classes.TextInputRoot}>
+              <Group gap={"12px"}>
+                <Box
+                  className={`${classes.TextInputBox} ${
+                    false && classes.TextInputBoxError
+                  }`}
+                >
+                  <Text className={classes.MainSemiBold12}>닉네임</Text>
+                  <TextInput
+                    classNames={{ input: classes.TextInputInput }}
+                    variant="unstyled"
+                    size="xs"
+                    placeholder="닉네임을 입력하세요."
+                  />
+                </Box>
+                <Button className={classes.RepetButton}>중복 확인</Button>
+              </Group>
+              {/* 안내 메세지 */}
+              <Group gap={"2px"} pl={"9px"}>
+                {false && (
+                  <Text className={classes.MainRegular12}>
+                    * 사용 가능한 닉네임입니다.
+                  </Text>
+                )}
+                {false && (
+                  <Text className={classes.HighlightRegular12}>
+                    * 이미 사용된 닉네임이거나 형식이 올바르지 않습니다.
+                  </Text>
+                )}
+                <Text className={classes.Gray5Regular12}>(2~16글자)</Text>
+              </Group>
+            </Box>
           </Stack>
           {/* 동의 삼총사 */}
           <Agreement />
@@ -68,6 +177,7 @@ export function JoinUs() {
             className={`${classes.Button} ${false && classes.ButtonActive}`}
             variant="filled"
             mt={"30px"}
+            disabled
           >
             회원 가입
           </Button>
@@ -79,60 +189,6 @@ export function JoinUs() {
             아고라에서는 무엇을 할 수 있나요?
           </Text>
         </Box>
-      </Group>
-    </Box>
-  );
-}
-
-interface TextInputBoxProps {
-  title: string;
-  placeholder: string;
-  isCheckButton?: boolean;
-  isCheck?: boolean;
-  isError?: boolean;
-  checkMessage?: string;
-  errorMessage?: string;
-  message?: string;
-}
-export function TextInputBox({
-  title,
-  placeholder,
-  isCheckButton = false,
-  isCheck = false,
-  isError = false,
-  checkMessage = "",
-  errorMessage = "",
-  message = "",
-}: TextInputBoxProps) {
-  return (
-    <Box className={classes.TextInputRoot}>
-      <Group gap={"12px"}>
-        <Box
-          className={`${classes.TextInputBox} ${
-            isError && classes.TextInputBoxError
-          }`}
-        >
-          <Text className={classes.MainSemiBold12}>{title}</Text>
-          <TextInput
-            classNames={{ input: classes.TextInputInput }}
-            variant="unstyled"
-            size="xs"
-            placeholder={placeholder}
-          />
-        </Box>
-        {isCheckButton && (
-          <Button className={classes.RepetButton}>중복 확인</Button>
-        )}
-      </Group>
-      {/* 안내 메세지 */}
-      <Group gap={"2px"} pl={"9px"}>
-        {isCheck && (
-          <Text className={classes.MainRegular12}>{checkMessage}</Text>
-        )}
-        {isError && (
-          <Text className={classes.HighlightRegular12}>{errorMessage}</Text>
-        )}
-        <Text className={classes.Gray5Regular12}>{message}</Text>
       </Group>
     </Box>
   );
