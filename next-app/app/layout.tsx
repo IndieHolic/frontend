@@ -1,4 +1,6 @@
 import "@mantine/core/styles.layer.css";
+import "@mantine/carousel/styles.layer.css";
+import "@/public/fonts/SBAggroB.css";
 import "@/styles/globals.css";
 import "@/styles/color-styles.css";
 import React from "react";
