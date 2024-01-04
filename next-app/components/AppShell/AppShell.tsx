@@ -7,10 +7,10 @@ interface AppShellProps {
 }
 export function AppShell({ children }: AppShellProps) {
   return (
-    <div className={classes.AppShell}>
+    <section className={classes.AppShell}>
       <Header />
       {children}
       <Footer />
-    </div>
+    </section>
   );
 }

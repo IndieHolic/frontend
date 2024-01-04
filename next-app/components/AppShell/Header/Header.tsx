@@ -13,7 +13,7 @@ export function Header() {
             <Image src="/images/header/agora-logo.svg" />
           </Link>
           <Group gap={"35px"}>
-            <Link className={classes.BlackSemiBold20} href="/">
+            <Link className={classes.BlackSemiBold20} href="/game">
               게임
             </Link>
             <Link className={classes.BlackSemiBold20} href="/">
