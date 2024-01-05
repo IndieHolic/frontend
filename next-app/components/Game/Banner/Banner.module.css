@@ -1,0 +1,73 @@
+.CarouselViewport {
+  border-radius: 10px;
+}
+.CarouselIndicators {
+  bottom: -18px;
+}
+.CarouselIndicator {
+  width: 20px;
+  height: 10px;
+
+  background-color: var(--gray-2);
+
+  transition: width 250ms ease;
+  opacity: 1;
+}
+.CarouselIndicator:hover {
+  background-color: var(--gray-3);
+}
+.CarouselIndicator[data-active] {
+  width: 80px;
+  background-color: var(--main);
+}
+
+.BannerGradient {
+  display: flex;
+  width: 1200px;
+  height: 450px;
+
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0)
+  );
+  background-blend-mode: multiply;
+
+  align-items: center;
+}
+
+.BoxGradient {
+  display: flex;
+  width: fit-content;
+  height: 60px;
+
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0) 75%,
+    rgba(0, 0, 0, 0)
+  );
+  background-blend-mode: multiply;
+
+  align-items: center;
+  gap: 14px;
+}
+
+.WhiteBold32 {
+  font-size: 32px;
+  font-weight: var(--font-weight-bold);
+  color: white;
+
+  line-height: 1;
+}
+
+.WhiteLight20 {
+  font-size: 20px;
+  font-weight: var(--font-weight-light);
+  color: white;
+
+  line-height: 1;
+}

@@ -24,7 +24,7 @@
   padding: 0 16px;
 
   align-items: center;
-  gap: 10px;
+  justify-content: space-between;
 }
 
 .WhiteExtraLight18 {
@@ -33,4 +33,36 @@
   color: white;
 
   line-height: 1;
+}
+
+.SBAggroMainBold18 {
+  margin-top: 2px;
+  font-family: "SBAggroB";
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  color: var(--main);
+
+  line-height: 1;
+}
+
+.TextInputSection {
+  width: 32px;
+  left: 0;
+}
+.TextInputInput {
+  width: 200px;
+  height: 32px;
+  padding-left: 32px;
+  padding-right: 6px;
+
+  border: none;
+  border-radius: 10px;
+
+  background-color: var(--gray-7);
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  color: var(--gray-2);
+}
+.TextInputInput::placeholder {
+  color: var(--gray-4);
 }
