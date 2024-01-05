@@ -1,28 +1,7 @@
-.Wrapper {
-  display: flex;
-  flex-direction: column;
-
-  width: 1200px;
-  height: 100%;
-  margin: 0 auto;
-  padding: 35px 16px 40px;
-
-  gap: 24px;
-}
-
-.BlackExtraLight32 {
-  font-size: 32px;
-  font-weight: var(--font-weight-extra-light);
-  color: black;
-
-  line-height: 1;
-}
-
 .Box {
   display: flex;
   flex-direction: column;
-
-  width: 568px;
+  flex-grow: 1;
 }
 
 .TextInputRoot {
@@ -148,12 +127,4 @@
 }
 .ButtonActive:hover {
   background-color: var(--main-dark);
-}
-
-.BlackExtraLight24 {
-  font-size: 24px;
-  font-weight: var(--font-weight-extra-light);
-  color: black;
-
-  line-height: 1;
 }
