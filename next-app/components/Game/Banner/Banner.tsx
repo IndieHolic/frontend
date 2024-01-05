@@ -10,34 +10,33 @@ export function Banner() {
   const autoplay = useRef(Autoplay({ delay: 3000 }));
 
   return (
-    <Box className={classes.Wrapper}>
-      <Carousel
-        height={"450px"}
-        loop
-        withIndicators
-        withControls={false}
-        plugins={[autoplay.current]}
-        onMouseEnter={autoplay.current.stop}
-        onMouseLeave={autoplay.current.reset}
-        classNames={{
-          viewport: classes.CarouselViewport,
-          indicators: classes.CarouselIndicators,
-          indicator: classes.CarouselIndicator,
-        }}
-        mt={"10px"}
-      >
-        <BannerImage />
-        <BannerImage />
-        <BannerImage />
-        <BannerImage />
-      </Carousel>
-    </Box>
+    <Carousel
+      w={"100%"}
+      height={"450px"}
+      loop
+      withIndicators
+      withControls={false}
+      plugins={[autoplay.current]}
+      onMouseEnter={autoplay.current.stop}
+      onMouseLeave={autoplay.current.reset}
+      classNames={{
+        viewport: classes.CarouselViewport,
+        indicators: classes.CarouselIndicators,
+        indicator: classes.CarouselIndicator,
+      }}
+      mt={"10px"}
+    >
+      <BannerImage />
+      <BannerImage />
+      <BannerImage />
+      <BannerImage />
+    </Carousel>
   );
 }
 
 export function BannerImage() {
   return (
-    <BackgroundImage w={"1168px"} h={"450px"} src="/images/game/banner.png">
+    <BackgroundImage w={"100%"} h={"450px"} src="/images/game/banner.png">
       <Box className={classes.BannerGradient}>
         <Stack gap={"10px"} ml={"75px"}>
           <Box className={classes.BoxGradient}>
