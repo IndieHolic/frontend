@@ -15,28 +15,34 @@ export function Banner() {
       height={"450px"}
       loop
       withIndicators
-      withControls={false}
+      controlSize={35}
       plugins={[autoplay.current]}
       onMouseEnter={autoplay.current.stop}
       onMouseLeave={autoplay.current.reset}
+      className={classes.Carousel}
       classNames={{
         viewport: classes.CarouselViewport,
         indicators: classes.CarouselIndicators,
         indicator: classes.CarouselIndicator,
+        controls: classes.CarouselControls,
+        control: classes.CarouselControl,
       }}
-      mt={"10px"}
     >
-      <BannerImage />
-      <BannerImage />
-      <BannerImage />
-      <BannerImage />
+      <BannerSlide />
+      <BannerSlide />
+      <BannerSlide />
+      <BannerSlide />
     </Carousel>
   );
 }
 
-export function BannerImage() {
+export function BannerSlide() {
   return (
-    <BackgroundImage w={"100%"} h={"450px"} src="/images/game/banner.png">
+    <BackgroundImage
+      className={classes.BannerSlide}
+      src="/images/game/banner.png"
+      mx={"10px"}
+    >
       <Box className={classes.BannerGradient}>
         <Stack gap={"10px"} ml={"75px"}>
           <Box className={classes.BoxGradient}>

@@ -1,3 +1,6 @@
+.Carousel:hover .CarouselControls {
+  opacity: 0.85;
+}
 .CarouselViewport {
   border-radius: 10px;
 }
@@ -20,12 +23,28 @@
   width: 80px;
   background-color: var(--main);
 }
+.CarouselControls {
+  padding: 0 10px;
+  transition: opacity 150ms ease;
+  opacity: 0;
+}
+.CarouselControl {
+  box-shadow: none;
+  background-color: white;
+}
+
+.BannerSlide {
+  width: 100%;
+  height: 450px;
+  border-radius: 10px;
+}
 
 .BannerGradient {
   display: flex;
   width: 1200px;
   height: 450px;
 
+  border-radius: 10px;
   background-image: linear-gradient(
     to right,
     rgba(0, 0, 0, 0.7),

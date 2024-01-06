@@ -20,7 +20,7 @@ export function Header() {
               에셋
             </Link>
             <Link className={classes.BlackSemiBold20} href="/">
-              커뮤니티
+              개발 공간
             </Link>
             <Link href="/" style={{ height: "20px" }}>
               <IconSearch size={"20px"} stroke={2} />
