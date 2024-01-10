@@ -6,11 +6,11 @@ import { Divider, Group, Stack, Text } from "@mantine/core";
 export default function Home() {
   return (
     <ContentWrapper>
-      <Stack gap={"24px"} mt={"35px"} mb={"40px"}>
-        <Text c={"black"} fw={200} fz={"32px"}>
+      <Stack gap={24} mt={35} mb={40}>
+        <Text c={"black"} fw={200} fz={32}>
           회원가입
         </Text>
-        <Group align="flex-start" justify="space-between" gap={"16px"}>
+        <Group align="flex-start" justify="space-between" gap={16}>
           <JoinUsInput />
           <Divider orientation="vertical" color="#E6E6E6" />
           <JoinUsInfo />
