@@ -37,10 +37,10 @@ export function GameDisplay() {
             align="flex-start"
             justify="space-between"
             gap={0}
-            h={"125px"}
-            p={"8px"}
+            h={125}
+            p={8}
           >
-            <Stack gap={"4px"}>
+            <Stack gap={4}>
               <Text className={classes.Gray6Regular12} lineClamp={1}>
                 어드벤처
               </Text>
@@ -48,24 +48,19 @@ export function GameDisplay() {
                 ALPO Way Home
               </Text>
             </Stack>
-            <Group
-              w={"100%"}
-              align="flex-end"
-              justify="space-between"
-              gap={"8px"}
-            >
-              <Stack gap={"4px"}>
-                <Group gap={"6px"}>
-                  <Avatar className={classes.Avatar} size={"20px"}>
+            <Group w={"100%"} align="flex-end" justify="space-between" gap={8}>
+              <Stack gap={4}>
+                <Group gap={6}>
+                  <Avatar className={classes.Avatar} size={20}>
                     <IconUserCircle color="#B3B3B3" stroke={1} />
                   </Avatar>
                   <Text className={classes.Gray6Regular12} lineClamp={1}>
                     Team Escape
                   </Text>
                 </Group>
-                <Group gap={"6px"}>
+                <Group gap={6}>
                   <Box className={classes.DiscountBox}>-50%</Box>
-                  <Stack align="flex-start" gap={"1px"}>
+                  <Stack align="flex-start" gap={1}>
                     <Text className={classes.Gray6Regular10}>₩ 30,000</Text>
                     <Text className={classes.MainSemiBold14}>₩ 15,000</Text>
                   </Stack>

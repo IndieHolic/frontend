@@ -16,11 +16,11 @@ export function GameSort() {
 
   const options = sortOptions.map((item) => (
     <Combobox.Option className={classes.ComboboxOption} value={item} key={item}>
-      <Group gap={"6px"}>
+      <Group gap={6}>
         {item === value ? (
           <IconCheck size={14} color="#138BCF" stroke={4} />
         ) : (
-          <Box w={"14px"} h={"14px"} />
+          <Box w={14} h={14} />
         )}
         <Text className={classes.BlackRegular14}>{item}</Text>
       </Group>
@@ -41,7 +41,7 @@ export function GameSort() {
           className={classes.Button}
           onClick={() => combobox.toggleDropdown()}
         >
-          <Group gap={"8px"}>
+          <Group gap={8}>
             <IconSortDescending size={14} color="black" stroke={1.5} />
             <Text className={classes.BlackRegular14}>{value}</Text>
           </Group>

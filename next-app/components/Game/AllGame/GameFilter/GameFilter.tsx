@@ -55,10 +55,10 @@ export function GameFilter() {
         classNames={{ scrollbar: classes.ScrollAreaScrollbar }}
         scrollbarSize={7}
       >
-        <Stack align="flex-start" justify="flex-start" gap={"12px"}>
+        <Stack align="flex-start" justify="flex-start" gap={12}>
           {/* 필터 초기화 버튼 */}
           <UnstyledButton style={{ alignSelf: "flex-end" }}>
-            <Group gap={"6px"}>
+            <Group gap={6}>
               <IconReload size={14} color="#808080" stroke={1.5} />
               <Text className={classes.Gray6Regular14}>필터 초기화</Text>
             </Group>
