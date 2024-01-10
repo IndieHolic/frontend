@@ -6,11 +6,11 @@ import { GameDisplay } from "../GameDisplay/GameDisplay";
 
 export function Collection() {
   return (
-    <Stack gap={"17px"}>
+    <Stack gap={17}>
       <Link href="/">
         <BackgroundImage
           className={classes.CollectionImage}
-          h={"70px"}
+          h={70}
           src="/images/game/christmas.png"
         >
           <Box className={classes.BoxGradient}>
@@ -20,7 +20,7 @@ export function Collection() {
       </Link>
       <Carousel
         w={"100%"}
-        height={"245px"}
+        height={245}
         align="start"
         loop
         withIndicators
@@ -35,43 +35,43 @@ export function Collection() {
           control: classes.CarouselControl,
         }}
       >
-        <Box mx={"8.5px"}>
+        <Box mx={8.5}>
           <GameDisplay />
         </Box>
-        <Box mx={"8.5px"}>
+        <Box mx={8.5}>
           <GameDisplay />
         </Box>
-        <Box mx={"8.5px"}>
+        <Box mx={8.5}>
           <GameDisplay />
         </Box>
-        <Box mx={"8.5px"}>
+        <Box mx={8.5}>
           <GameDisplay />
         </Box>
-        <Box mx={"8.5px"}>
+        <Box mx={8.5}>
           <GameDisplay />
         </Box>
-        <Box mx={"8.5px"}>
+        <Box mx={8.5}>
           <GameDisplay />
         </Box>
-        <Box mx={"8.5px"}>
+        <Box mx={8.5}>
           <GameDisplay />
         </Box>
-        <Box mx={"8.5px"}>
+        <Box mx={8.5}>
           <GameDisplay />
         </Box>
-        <Box mx={"8.5px"}>
+        <Box mx={8.5}>
           <GameDisplay />
         </Box>
-        <Box mx={"8.5px"}>
+        <Box mx={8.5}>
           <GameDisplay />
         </Box>
-        <Box mx={"8.5px"}>
+        <Box mx={8.5}>
           <GameDisplay />
         </Box>
-        <Box mx={"8.5px"}>
+        <Box mx={8.5}>
           <GameDisplay />
         </Box>
-        <Box mx={"8.5px"}>
+        <Box mx={8.5}>
           <GameDisplay />
         </Box>
       </Carousel>

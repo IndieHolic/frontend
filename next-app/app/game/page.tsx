@@ -6,7 +6,7 @@ import { Stack } from "@mantine/core";
 export default function Home() {
   return (
     <ContentWrapper>
-      <Stack gap={"50px"} mt={"10px"} mb={"70px"}>
+      <Stack gap={50} mt={10} mb={70}>
         <Banner />
         <Collection />
         <Collection />

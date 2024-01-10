@@ -12,7 +12,7 @@ export function Banner() {
   return (
     <Carousel
       w={"100%"}
-      height={"450px"}
+      height={450}
       loop
       withIndicators
       controlSize={35}
@@ -41,16 +41,12 @@ export function BannerSlide() {
     <BackgroundImage
       className={classes.BannerSlide}
       src="/images/game/banner.png"
-      mx={"10px"}
+      mx={10}
     >
       <Box className={classes.BannerGradient}>
-        <Stack gap={"10px"} ml={"75px"}>
+        <Stack gap={10} ml={75}>
           <Box className={classes.BoxGradient}>
-            <Image
-              w={"60px"}
-              radius={"8px"}
-              src="/images/game/banner-icon.png"
-            />
+            <Image w={60} radius={8} src="/images/game/banner-icon.png" />
             <Text className={classes.WhiteBold32}>승리의 여신: NIKKE</Text>
           </Box>
           <Text className={classes.WhiteLight20}>

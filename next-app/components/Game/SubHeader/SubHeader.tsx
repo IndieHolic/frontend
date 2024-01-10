@@ -11,7 +11,7 @@ export function SubHeader({ children }: SubHeaderProps) {
     <section className={classes.SubHeader}>
       <Box className={classes.Container}>
         <Box className={classes.Wrapper}>
-          <Group gap={"10px"}>
+          <Group gap={10}>
             <Link href="/game/all-game">
               <Image src="/images/game/icon-category.svg" />
             </Link>
@@ -32,9 +32,7 @@ export function SubHeader({ children }: SubHeaderProps) {
             variant="filled"
             size="xs"
             placeholder="게임 검색하기"
-            leftSection={
-              <IconSearch size={"20px"} color="#333333" stroke={2} />
-            }
+            leftSection={<IconSearch size={20} color="#333333" stroke={2} />}
           />
         </Box>
       </Box>
