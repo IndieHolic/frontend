@@ -1,0 +1,32 @@
+.ComboboxDropDown {
+  padding: 2px;
+  border: 1px solid var(--gray-3);
+}
+.ComboboxOption {
+  padding: 6px 4px;
+}
+.ComboboxOption:hover {
+  background-color: var(--light-gray);
+}
+
+.BlackRegular14 {
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  color: black;
+
+  line-height: 1;
+}
+
+.Button {
+  width: fit-content;
+  height: 28px;
+  padding: 6px;
+  padding-right: 10px;
+
+  border: none;
+  border-radius: 10px;
+  background-color: var(--gray-1);
+}
+.Button:hover {
+  background-color: var(--gray-2);
+}

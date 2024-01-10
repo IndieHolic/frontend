@@ -1,7 +1,3 @@
-.Relative {
-  position: relative;
-}
-
 .Container {
   min-width: 220px;
   width: 220px;
@@ -11,8 +7,12 @@
   background-color: var(--gray-1);
 }
 
-.Container:hover ~ .Overlay {
+.Container:hover .Overlay {
   display: flex;
+}
+
+.Relative {
+  position: relative;
 }
 
 .Image {
@@ -20,6 +20,28 @@
   height: 120px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+}
+
+.Overlay {
+  display: none;
+  flex-direction: column;
+  padding: 24px 20px;
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  justify-content: space-between;
+}
+.Overlay:hover {
+  display: flex;
+}
+
+.WhiteRegular14 {
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  color: white;
+
+  line-height: 1.3;
 }
 
 .Gray6Regular12 {
@@ -35,7 +57,7 @@
   font-weight: var(--font-weight-bold);
   color: black;
 
-  line-height: 1.3;
+  line-height: 1;
 }
 
 .Avatar {
@@ -78,27 +100,6 @@
   line-height: 1;
 }
 
-.Overlay {
-  display: none;
-  flex-direction: column;
-  padding: 24px 20px;
-
-  border-radius: 10px;
-
-  justify-content: space-between;
-}
-.Overlay:hover {
-  display: flex;
-}
-
-.WhiteRegular14 {
-  font-size: 14px;
-  font-weight: var(--font-weight-regular);
-  color: white;
-
-  line-height: 1.6;
-}
-
 .Button {
   width: 32px;
   height: 32px;
@@ -106,23 +107,11 @@
   border: none;
   border-radius: 16px;
   background-color: var(--main);
-
-  align-self: center;
 }
 .Button:hover img {
   content: url("/images/game/icon-shopping-bag-filled-white.svg");
 }
 
-.ActiveButton {
-  width: 32px;
-  height: 32px;
-
-  border: none;
-  border-radius: 16px;
-  background-color: var(--main);
-
-  align-self: center;
-}
 .ActiveButton:hover img {
   content: url("/images/game/icon-shopping-bag-white.svg");
 }

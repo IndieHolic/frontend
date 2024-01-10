@@ -48,20 +48,14 @@ export function LogInModal() {
             placeholder="비밀번호"
             mt={"16px"}
           />
-          <Checkbox
-            classNames={{
-              root: classes.CheckboxRoot,
-              body: classes.CheckboxBody,
-              inner: classes.CheckboxInner,
-              labelWrapper: classes.CheckboxLabelWrapper,
-              label: classes.CheckboxLabel,
-            }}
-            defaultChecked
-            label="로그인 상태 유지"
-            color="#138BCF"
-            mt={"12px"}
-          />
-
+          <Group gap={"10px"} mt={"12px"} style={{ alignSelf: "flex-start" }}>
+            <Checkbox
+              classNames={{ inner: classes.CheckboxInner }}
+              defaultChecked
+              color="#138BCF"
+            />
+            <Text className={classes.Gray4Regular14}>로그인 상태 유지</Text>
+          </Group>
           <Button
             className={classes.Button}
             onClick={close}
