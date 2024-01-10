@@ -19,10 +19,10 @@ export function EmailVerifyModal() {
         onClose={close}
         centered
       >
-        <Stack align="center" gap={"0px"}>
+        <Stack align="center" gap={0}>
           <Text className={classes.BlackExtraLight32}>이메일 인증</Text>
-          <Divider color="#E6E6E6" w={"100%"} mt={"25px"} />
-          <Stack align="center" gap={"8px"} mt={"16px"}>
+          <Divider color="#E6E6E6" w={"100%"} mt={25} />
+          <Stack align="center" gap={"8px"} mt={16}>
             <Text className={classes.BlackRegular18}>
               <Text className={classes.MainMedium18} component="span">
                 skku@g.skku.edu
@@ -33,7 +33,7 @@ export function EmailVerifyModal() {
               인증 메일이 발송되었습니다.
             </Text>
           </Stack>
-          <Stack align="center" gap={"8px"} mt={"20px"}>
+          <Stack align="center" gap={8} mt={20}>
             <Text className={classes.BlackRegular16}>
               발송된 메일에 포함된 인증 버튼을 누른 뒤에
             </Text>
@@ -48,7 +48,7 @@ export function EmailVerifyModal() {
             className={classes.Button}
             onClick={close}
             variant="filled"
-            mt={"36px"}
+            mt={36}
           >
             이메일 인증 완료
           </Button>

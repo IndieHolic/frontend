@@ -15,10 +15,10 @@ export function JoinUsInput() {
   return (
     <Box className={classes.Box}>
       {/* 입력 오총사 */}
-      <Stack gap={"20px"}>
+      <Stack gap={20}>
         {/* 아이디 입력 박스 */}
         <Box className={classes.TextInputRoot}>
-          <Group gap={"12px"}>
+          <Group gap={12}>
             <Box
               className={`${classes.TextInputBox} ${
                 false && classes.TextInputBoxError
@@ -35,7 +35,7 @@ export function JoinUsInput() {
             <Button className={classes.RepetButton}>중복 확인</Button>
           </Group>
           {/* 안내 메세지 */}
-          <Group gap={"2px"} pl={"9px"}>
+          <Group gap={2} pl={9}>
             {false && (
               <Text className={classes.MainRegular12}>
                 * 사용 가능한 아이디입니다.
@@ -53,7 +53,7 @@ export function JoinUsInput() {
         </Box>
         {/* 이메일 입력 박스 */}
         <Box className={classes.TextInputRoot}>
-          <Group gap={"12px"}>
+          <Group gap={12}>
             <Box
               className={`${classes.TextInputBox} ${
                 false && classes.TextInputBoxError
@@ -71,7 +71,7 @@ export function JoinUsInput() {
             <EmailVerifyModal />
           </Group>
           {/* 안내 메세지 */}
-          <Group gap={"2px"} pl={"9px"}>
+          <Group gap={2} pl={9}>
             {false && (
               <Text className={classes.HighlightRegular12}>
                 * 이메일 인증을 해 주세요.
@@ -95,7 +95,7 @@ export function JoinUsInput() {
             />
           </Box>
           {/* 안내 메세지 */}
-          <Group gap={"2px"} pl={"9px"}>
+          <Group gap={2} pl={9}>
             {false && (
               <Text className={classes.HighlightRegular12}>
                 * 비밀번호 형식이 올바르지 않습니다.
@@ -108,7 +108,7 @@ export function JoinUsInput() {
         </Box>
         {/* 비밀번호 확인 입력 박스 */}
         <Box className={classes.TextInputRoot}>
-          <Group gap={"12px"}>
+          <Group gap={12}>
             <Box
               className={`${classes.TextInputBox} ${
                 false && classes.TextInputBoxError
@@ -124,7 +124,7 @@ export function JoinUsInput() {
             </Box>
           </Group>
           {/* 안내 메세지 */}
-          <Group gap={"2px"} pl={"9px"}>
+          <Group gap={2} pl={9}>
             {false && (
               <Text className={classes.HighlightRegular12}>
                 * 비밀번호가 일치하지 않습니다.
@@ -134,7 +134,7 @@ export function JoinUsInput() {
         </Box>
         {/* 닉네임 입력 박스 */}
         <Box className={classes.TextInputRoot}>
-          <Group gap={"12px"}>
+          <Group gap={12}>
             <Box
               className={`${classes.TextInputBox} ${
                 false && classes.TextInputBoxError
@@ -151,7 +151,7 @@ export function JoinUsInput() {
             <Button className={classes.RepetButton}>중복 확인</Button>
           </Group>
           {/* 안내 메세지 */}
-          <Group gap={"2px"} pl={"9px"}>
+          <Group gap={2} pl={9}>
             {false && (
               <Text className={classes.MainRegular12}>
                 * 사용 가능한 닉네임입니다.
@@ -171,7 +171,7 @@ export function JoinUsInput() {
       <Button
         className={`${classes.Button} ${false && classes.ButtonActive}`}
         variant="filled"
-        mt={"30px"}
+        mt={30}
         disabled
       >
         회원 가입
@@ -182,8 +182,8 @@ export function JoinUsInput() {
 
 export function Agreement() {
   return (
-    <Stack gap={"8px"} mt={"25px"}>
-      <Group gap={"10px"}>
+    <Stack gap={8} mt={25}>
+      <Group gap={10}>
         <Checkbox
           classNames={{ inner: classes.CheckboxInner }}
           color="#138BCF"
@@ -196,7 +196,7 @@ export function Agreement() {
           에 동의합니다.
         </Text>
       </Group>
-      <Group gap={"10px"}>
+      <Group gap={10}>
         <Checkbox
           classNames={{ inner: classes.CheckboxInner }}
           color="#138BCF"
@@ -209,7 +209,7 @@ export function Agreement() {
           에 동의합니다.
         </Text>
       </Group>
-      <Group gap={"10px"}>
+      <Group gap={10}>
         <Checkbox
           classNames={{ inner: classes.CheckboxInner }}
           color="#138BCF"
