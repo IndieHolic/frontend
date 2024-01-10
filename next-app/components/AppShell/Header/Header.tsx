@@ -8,11 +8,11 @@ export function Header() {
   return (
     <Box className={classes.Container}>
       <Box className={classes.Wrapper}>
-        <Group gap={"50px"}>
+        <Group gap={50}>
           <Link href="/">
             <Image src="/images/header/agora-logo.svg" />
           </Link>
-          <Group gap={"35px"}>
+          <Group gap={35}>
             <Link className={classes.BlackSemiBold20} href="/game">
               게임
             </Link>
@@ -23,12 +23,12 @@ export function Header() {
               개발 공간
             </Link>
             <Link href="/" style={{ height: "20px" }}>
-              <IconSearch size={"20px"} stroke={2} />
+              <IconSearch size={20} stroke={2} />
             </Link>
           </Group>
         </Group>
-        <Group gap={"10px"}>
-          <Group gap={"20px"}>
+        <Group gap={10}>
+          <Group gap={20}>
             <Link className={classes.BlackRegular14} href="/">
               업로드
             </Link>

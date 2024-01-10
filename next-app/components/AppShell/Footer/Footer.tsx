@@ -14,14 +14,14 @@ export function Footer() {
       <Box className={classes.Wrapper}>
         <Box className={classes.TopContainer}>
           <Stack
-            w={"175px"}
-            h={"104px"}
+            w={175}
+            h={104}
             align="flex-start"
             justify="flex-start"
-            gap="20px"
+            gap={20}
           >
             <Text className={classes.Gray6Bold18}>정보</Text>
-            <Stack align="flex-start" justify="flex-start" gap="12px">
+            <Stack align="flex-start" justify="flex-start" gap={12}>
               <Link href="/">
                 <Text className={classes.LinkText}>공지사항</Text>
               </Link>
@@ -31,14 +31,14 @@ export function Footer() {
             </Stack>
           </Stack>
           <Stack
-            w={"175px"}
-            h={"104px"}
+            w={175}
+            h={104}
             align="flex-start"
             justify="flex-start"
-            gap="20px"
+            gap={20}
           >
             <Text className={classes.Gray6Bold18}>구매 관리</Text>
-            <Stack align="flex-start" justify="flex-start" gap="12px">
+            <Stack align="flex-start" justify="flex-start" gap={12}>
               <Link href="/">
                 <Text className={classes.LinkText}>구매 · 구독 내역</Text>
               </Link>
@@ -51,14 +51,14 @@ export function Footer() {
             </Stack>
           </Stack>
           <Stack
-            w={"175px"}
-            h={"104px"}
+            w={175}
+            h={104}
             align="flex-start"
             justify="flex-start"
-            gap="20px"
+            gap={20}
           >
             <Text className={classes.Gray6Bold18}>고객센터</Text>
-            <Stack align="flex-start" justify="flex-start" gap="12px">
+            <Stack align="flex-start" justify="flex-start" gap={12}>
               <Link href="/">
                 <Text className={classes.LinkText}>자주묻는 질문</Text>
               </Link>
@@ -68,14 +68,14 @@ export function Footer() {
             </Stack>
           </Stack>
           <Stack
-            w={"175px"}
-            h={"104px"}
+            w={175}
+            h={104}
             align="flex-start"
             justify="flex-start"
-            gap="20px"
+            gap={20}
           >
             <Text className={classes.Gray6Bold18}>도움말</Text>
-            <Stack align="flex-start" justify="flex-start" gap="12px">
+            <Stack align="flex-start" justify="flex-start" gap={12}>
               <Link href="/">
                 <Text className={classes.LinkText}>이용 약관</Text>
               </Link>
@@ -87,30 +87,22 @@ export function Footer() {
         </Box>
         <Divider variant="dashed" color="#CCCCCC" />
         <Box className={classes.BottomContainer}>
-          <Stack align="flex-start" justify="flex-start" gap="24px">
+          <Stack align="flex-start" justify="flex-start" gap={24}>
             <Group w={"100%"} justify="space-between">
               <Image src="/images/footer/agora-logo-gray.svg" />
-              <Group gap="10px">
+              <Group gap={10}>
                 <Link href="/" style={{ height: "20px" }}>
-                  <IconBrandYoutube
-                    size={"20px"}
-                    color="#808080"
-                    stroke={1.5}
-                  />
+                  <IconBrandYoutube size={20} color="#808080" stroke={1.5} />
                 </Link>
                 <Link href="/" style={{ height: "20px" }}>
-                  <IconBrandX size={"20px"} color="#808080" stroke={1.5} />
+                  <IconBrandX size={20} color="#808080" stroke={1.5} />
                 </Link>
                 <Link href="/" style={{ height: "20px" }}>
-                  <IconBrandInstagram
-                    size={"20px"}
-                    color="#808080"
-                    stroke={1.5}
-                  />
+                  <IconBrandInstagram size={20} color="#808080" stroke={1.5} />
                 </Link>
               </Group>
             </Group>
-            <Stack align="flex-start" justify="flex-start" gap="8px">
+            <Stack align="flex-start" justify="flex-start" gap={8}>
               <Text className={classes.Gray5Regular14}>
                 <Text className={classes.Gray5Bold14} component="span">
                   아고라
@@ -118,20 +110,16 @@ export function Footer() {
                 · 대표 김상현
               </Text>
               <Text className={classes.Gray5Regular14}>주소</Text>
-              <Group gap={"4px"}>
+              <Group gap={4}>
                 <Text className={classes.Gray5Regular14}>
                   사업자등록번호 · 통신판매업 신고번호 ·
                 </Text>
                 <Link href="/">
-                  <Group gap={"2px"}>
+                  <Group gap={2}>
                     <Text className={classes.Gray5Regular14} td={"underLine"}>
                       사업자정보 확인
                     </Text>
-                    <IconExternalLink
-                      size={"14px"}
-                      color="#999999"
-                      stroke={1.5}
-                    />
+                    <IconExternalLink size={14} color="#999999" stroke={1.5} />
                   </Group>
                 </Link>
               </Group>
