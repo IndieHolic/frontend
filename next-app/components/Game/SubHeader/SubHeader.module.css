@@ -66,3 +66,7 @@
 .TextInputInput::placeholder {
   color: var(--gray-4);
 }
+
+.MainSection {
+  z-index: 99;
+}

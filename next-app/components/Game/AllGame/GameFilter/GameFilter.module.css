@@ -1,0 +1,49 @@
+.Wrapper {
+  width: 220px;
+}
+
+.ScrollArea {
+  position: sticky;
+  width: 220px;
+  height: calc(100vh - 127px);
+  padding: 12px;
+  padding-right: 16px;
+
+  top: 111px;
+
+  border-radius: 10px;
+  background-color: var(--gray-1);
+}
+.ScrollAreaScrollbar {
+  padding-top: 5px;
+  right: 5px;
+}
+
+.Gray6Regular14 {
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  color: var(--gray-6);
+
+  line-height: 1;
+}
+
+.BlackExtraLight18 {
+  font-size: 18px;
+  font-weight: var(--font-weight-extra-light);
+  color: black;
+
+  line-height: 1;
+}
+
+.CheckboxInner svg {
+  top: 5px;
+  left: 4px;
+}
+
+.BlackRegular14 {
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  color: black;
+
+  line-height: 1;
+}

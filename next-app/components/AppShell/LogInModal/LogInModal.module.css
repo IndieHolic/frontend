@@ -43,20 +43,12 @@
   color: var(--gray-6);
 }
 
-.CheckboxRoot {
-  align-self: flex-start;
-}
-.CheckboxBody {
-  gap: 10px;
-}
 .CheckboxInner svg {
   top: 5px;
   left: 4px;
 }
-.CheckboxLabelWrapper {
-  justify-content: center;
-}
-.CheckboxLabel {
+
+.Gray4Regular14 {
   font-size: 14px;
   font-weight: var(--font-weight-regular);
   color: var(--gray-4);

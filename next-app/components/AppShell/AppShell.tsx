@@ -9,7 +9,7 @@ export function AppShell({ children }: AppShellProps) {
   return (
     <section className={classes.AppShell}>
       <Header />
-      {children}
+      <section className={classes.MainSection}>{children}</section>
       <Footer />
     </section>
   );

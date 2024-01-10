@@ -1,0 +1,86 @@
+.ModalContent {
+  width: 440px;
+  height: 500px;
+
+  border-radius: 10px;
+}
+.ModalHeader {
+  min-height: 44px;
+  padding: 16px 16px 0px;
+
+  justify-content: flex-end;
+}
+.ModalBody {
+  padding: 0px 36px 36px;
+}
+
+.BlackExtraLight32 {
+  font-size: 32px;
+  font-weight: var(--font-weight-extra-light);
+  color: black;
+
+  line-height: 1;
+}
+
+.TagFlexBox {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: flex-start;
+  row-gap: 8px;
+  column-gap: 10px;
+}
+
+.BlackExtraLight18 {
+  font-size: 18px;
+  font-weight: var(--font-weight-extra-light);
+  color: black;
+
+  line-height: 1;
+}
+
+.Button {
+  height: 30px;
+  padding: 7px;
+
+  border: 1px solid var(--gray-4);
+  border-radius: 10px;
+  background-color: white;
+
+  color: var(--gray-6);
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+
+  line-height: 1;
+}
+.Button:hover {
+  background-color: var(--gray-1);
+}
+
+.ActiveButton {
+  padding: 8px;
+
+  border: none;
+  background-color: var(--main);
+
+  color: white;
+}
+.ActiveButton:hover {
+  background-color: var(--main-dark);
+}
+
+.CompleteButton {
+  width: 368px;
+  height: 52px;
+
+  border: none;
+  border-radius: 10px;
+  background-color: var(--main);
+
+  font-size: 20px;
+  font-weight: var(--font-weight-bold);
+  color: white;
+}
+.CompleteButton:hover {
+  background-color: var(--main-dark);
+}

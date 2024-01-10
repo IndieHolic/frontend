@@ -1,0 +1,66 @@
+.CollectionImage {
+  border-radius: 10px;
+}
+
+.BoxGradient {
+  display: flex;
+  width: fit-content;
+  height: 70px;
+  padding-left: 16px;
+  padding-right: 32px;
+
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0)
+  );
+  background-blend-mode: multiply;
+
+  align-items: center;
+}
+
+.WhiteBlack24 {
+  font-size: 24px;
+  font-weight: var(--font-weight-black);
+  color: white;
+
+  line-height: 1;
+}
+
+.Carousel:hover .CarouselControls {
+  opacity: 0.85;
+}
+.CarouselViewport {
+  border-radius: 10px;
+}
+.CarouselIndicators {
+  bottom: -18px;
+}
+.CarouselIndicator {
+  width: 20px;
+  height: 10px;
+
+  background-color: var(--gray-2);
+
+  transition: width 250ms ease;
+  opacity: 1;
+}
+.CarouselIndicator:hover {
+  background-color: var(--gray-3);
+}
+.CarouselIndicator[data-active] {
+  width: 80px;
+  background-color: var(--main);
+}
+.CarouselControls {
+  padding: 0 5px;
+  transition: opacity 150ms ease;
+  opacity: 0;
+}
+.CarouselControl {
+  box-shadow: none;
+  background-color: white;
+}

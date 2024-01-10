@@ -3,3 +3,7 @@
   flex-direction: column;
   min-width: 1200px;
 }
+
+.MainSection {
+  z-index: 100;
+}

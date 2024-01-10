@@ -1,0 +1,117 @@
+.Container {
+  min-width: 220px;
+  width: 220px;
+  height: 245px;
+
+  border-radius: 10px;
+  background-color: var(--gray-1);
+}
+
+.Container:hover .Overlay {
+  display: flex;
+}
+
+.Relative {
+  position: relative;
+}
+
+.Image {
+  min-height: 120px;
+  height: 120px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.Overlay {
+  display: none;
+  flex-direction: column;
+  padding: 24px 20px;
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  justify-content: space-between;
+}
+.Overlay:hover {
+  display: flex;
+}
+
+.WhiteRegular14 {
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  color: white;
+
+  line-height: 1.3;
+}
+
+.Gray6Regular12 {
+  font-size: 12px;
+  font-weight: var(--font-weight-regular);
+  color: var(--gray-6);
+
+  line-height: 1;
+}
+
+.BlackBold16 {
+  font-size: 16px;
+  font-weight: var(--font-weight-bold);
+  color: black;
+
+  line-height: 1;
+}
+
+.Avatar {
+  border-radius: 10px;
+  background-color: var(--gray-2);
+}
+
+.DiscountBox {
+  display: flex;
+  width: 45px;
+  height: 25px;
+
+  border-radius: 5px;
+  background-color: var(--main);
+
+  font-size: 14px;
+  font-weight: var(--font-weight-semi-bold);
+  color: white;
+
+  line-height: 1;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.Gray6Regular10 {
+  font-size: 10px;
+  font-weight: var(--font-weight-regular);
+  color: var(--gray-6);
+
+  line-height: 1;
+  text-decoration: line-through;
+}
+
+.MainSemiBold14 {
+  font-size: 14px;
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--main);
+
+  line-height: 1;
+}
+
+.Button {
+  width: 32px;
+  height: 32px;
+
+  border: none;
+  border-radius: 16px;
+  background-color: var(--main);
+}
+.Button:hover img {
+  content: url("/images/game/icon-shopping-bag-filled-white.svg");
+}
+
+.ActiveButton:hover img {
+  content: url("/images/game/icon-shopping-bag-white.svg");
+}

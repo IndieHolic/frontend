@@ -1,0 +1,15 @@
+.Group {
+  display: flex;
+  margin-bottom: 16px;
+
+  align-items: stretch;
+  gap: 17px;
+}
+
+.BlackExtraLight32 {
+  font-size: 32px;
+  font-weight: var(--font-weight-extra-light);
+  color: black;
+
+  line-height: 1;
+}

@@ -12,7 +12,9 @@ export function SubHeader({ children }: SubHeaderProps) {
       <Box className={classes.Container}>
         <Box className={classes.Wrapper}>
           <Group gap={"10px"}>
-            <Image src="/images/game/icon-category.svg" />
+            <Link href="/game/all-game">
+              <Image src="/images/game/icon-category.svg" />
+            </Link>
             <Text className={classes.WhiteExtraLight18}>·</Text>
             <Link href="/">
               <Text className={classes.WhiteExtraLight18}>크리스마스 특집</Text>
@@ -36,7 +38,7 @@ export function SubHeader({ children }: SubHeaderProps) {
           />
         </Box>
       </Box>
-      {children}
+      <section className={classes.MainSection}>{children}</section>
     </section>
   );
 }
