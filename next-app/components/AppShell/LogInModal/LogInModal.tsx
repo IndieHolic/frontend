@@ -32,23 +32,23 @@ export function LogInModal() {
         onClose={close}
         centered
       >
-        <Stack align="center" gap={"0px"}>
+        <Stack align="center" gap={0}>
           <Text className={classes.BlackExtraLight32}>로그인</Text>
-          <Divider color="#E6E6E6" w={"100%"} mt={"25px"} />
+          <Divider color="#E6E6E6" w={"100%"} mt={25} />
           <TextInput
             classNames={{ input: classes.TextInputInput }}
             data-autofocus
             variant="filled"
             placeholder="아이디"
-            mt={"25px"}
+            mt={25}
           />
           <TextInput
             classNames={{ input: classes.TextInputInput }}
             variant="filled"
             placeholder="비밀번호"
-            mt={"16px"}
+            mt={16}
           />
-          <Group gap={"10px"} mt={"12px"} style={{ alignSelf: "flex-start" }}>
+          <Group gap={10} mt={12} style={{ alignSelf: "flex-start" }}>
             <Checkbox
               classNames={{ inner: classes.CheckboxInner }}
               defaultChecked
@@ -60,11 +60,11 @@ export function LogInModal() {
             className={classes.Button}
             onClick={close}
             variant="filled"
-            mt={"36px"}
+            mt={36}
           >
             로그인
           </Button>
-          <Group gap={"20px"} mt={"52px"}>
+          <Group gap={20} mt={52}>
             <Link onClick={close} href="/">
               <Text className={classes.LinkText}>아이디 찾기</Text>
             </Link>
