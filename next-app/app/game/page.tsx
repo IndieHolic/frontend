@@ -1,6 +1,9 @@
 import { ContentWrapper } from "@/components/Commons/ContentWrapper/ContentWrapper";
 import { Banner } from "@/components/Game/Banner/Banner";
-import { Collection } from "@/components/Game/Collection/Collection";
+import {
+  Collection,
+  CollectionTitle,
+} from "@/components/Game/Collection/Collection";
 import { Stack } from "@mantine/core";
 
 export default function Home() {
@@ -8,8 +11,14 @@ export default function Home() {
     <ContentWrapper>
       <Stack gap={50} mt={10} mb={70}>
         <Banner />
-        <Collection />
-        <Collection />
+        <Stack gap={17}>
+          <CollectionTitle />
+          <Collection />
+        </Stack>
+        <Stack gap={17}>
+          <CollectionTitle />
+          <Collection />
+        </Stack>
       </Stack>
     </ContentWrapper>
   );

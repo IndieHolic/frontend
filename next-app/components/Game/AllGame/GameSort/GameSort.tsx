@@ -16,14 +16,17 @@ export function GameSort() {
 
   const options = sortOptions.map((item) => (
     <Combobox.Option className={classes.ComboboxOption} value={item} key={item}>
-      <Group gap={6}>
-        {item === value ? (
+      {item === value ? (
+        <Group gap={6}>
           <IconCheck size={14} color="#138BCF" stroke={4} />
-        ) : (
+          <Text className={classes.BlackMedium14}>{item}</Text>
+        </Group>
+      ) : (
+        <Group gap={6}>
           <Box w={14} h={14} />
-        )}
-        <Text className={classes.BlackRegular14}>{item}</Text>
-      </Group>
+          <Text className={classes.BlackRegular14}>{item}</Text>
+        </Group>
+      )}
     </Combobox.Option>
   ));
 

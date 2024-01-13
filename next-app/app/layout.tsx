@@ -1,4 +1,5 @@
 import "@mantine/core/styles.layer.css";
+import "@mantine/notifications/styles.layer.css";
 import "@mantine/carousel/styles.layer.css";
 import "@/public/fonts/SBAggroB.css";
 import "@/styles/globals.css";
@@ -8,6 +9,7 @@ import type { Metadata } from "next";
 import Pretendard from "next/font/local";
 import { MantineProvider } from "@mantine/core";
 import { AppShell } from "@/components/AppShell/AppShell";
+import { Notifications } from "@mantine/notifications";
 
 // 공용 폰트 정의
 const pretendard = Pretendard({
@@ -56,6 +58,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       </head>
       <body className={pretendard.className}>
         <MantineProvider>
+          <Notifications />
           <AppShell>{children}</AppShell>
         </MantineProvider>
       </body>

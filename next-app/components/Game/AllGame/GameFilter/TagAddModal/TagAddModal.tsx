@@ -141,12 +141,14 @@ export function TagAddModal() {
           body: classes.ModalBody,
         }}
         opened={opened}
-        onClose={close}
+        onClose={() => {
+          if (confirm("태그 선택 창에서 나가시겠습니까?")) close();
+        }}
         closeOnClickOutside={false}
         centered
       >
         <Stack align="center" gap={0}>
-          <Text className={classes.BlackExtraLight32}>태그 추가</Text>
+          <Text className={classes.BlackExtraLight32}>태그</Text>
           <Divider color="#E6E6E6" w={"100%"} mt={25} />
           <ScrollArea w={368} h={258} type="always" scrollbarSize={7} my={16}>
             <Stack align="flex-start" justify="flex-start" gap={8} w={355}>
@@ -184,11 +186,11 @@ export function TagAddModal() {
         <Divider color="#E6E6E6" w={"100%"} />
         <Button
           className={classes.CompleteButton}
-          onClick={close}
+          onClick={() => close}
           variant="filled"
           mt={18}
         >
-          태그 선택 완료
+          태그 저장
         </Button>
       </Modal>
 
