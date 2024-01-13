@@ -67,13 +67,14 @@ export function GameDisplay() {
                 </Group>
               </Stack>
               <Button
-                className={`${classes.Button} ${true && classes.ActiveButton}`}
+                className={`${classes.Button} ${
+                  true && classes.FilledIconHover
+                }`}
                 variant="filled"
               >
-                {false && (
+                {false ? (
                   <Image src="/images/game/icon-shopping-bag-white.svg" />
-                )}
-                {true && (
+                ) : (
                   <Image src="/images/game/icon-shopping-bag-filled-white.svg" />
                 )}
               </Button>

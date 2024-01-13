@@ -1,12 +1,20 @@
 .ComboboxDropDown {
   padding: 2px;
-  border: 1px solid var(--gray-3);
+  border: 1px solid var(--mantine-color-gray-4);
 }
 .ComboboxOption {
   padding: 6px 4px;
 }
 .ComboboxOption:hover {
   background-color: var(--light-gray);
+}
+
+.BlackMedium14 {
+  font-size: 14px;
+  font-weight: var(--font-weight-medium);
+  color: black;
+
+  line-height: 1;
 }
 
 .BlackRegular14 {

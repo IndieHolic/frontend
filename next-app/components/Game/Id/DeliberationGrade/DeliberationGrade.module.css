@@ -1,0 +1,23 @@
+.Container {
+  width: 350px;
+  padding: 16px;
+
+  border-radius: 10px;
+  background-color: var(--gray-1);
+}
+
+.BlackExtraLight20 {
+  font-size: 20px;
+  font-weight: var(--font-weight-extra-light);
+  color: black;
+
+  line-height: 1;
+}
+
+.FlexBox {
+  display: flex;
+  flex-wrap: wrap;
+
+  row-gap: 12px;
+  column-gap: 10px;
+}

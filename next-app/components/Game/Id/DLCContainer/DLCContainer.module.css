@@ -1,0 +1,68 @@
+.Container {
+  width: 350px;
+  padding: 16px;
+
+  border-radius: 10px;
+  background-color: var(--gray-1);
+}
+
+.BlackExtraLight20 {
+  font-size: 20px;
+  font-weight: var(--font-weight-extra-light);
+  color: black;
+
+  line-height: 1;
+}
+
+.BlackRegular16 {
+  font-size: 16px;
+  font-weight: var(--font-weight-regular);
+  color: black;
+
+  line-height: 1;
+}
+
+.Discount {
+  height: 25px;
+  padding: 5.5px 4px;
+
+  border-radius: 5px;
+  background-color: var(--main);
+
+  font-size: 14px;
+  font-weight: var(--font-weight-semi-bold);
+  color: white;
+
+  line-height: 1;
+}
+
+.Gray5Regular14 {
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  color: var(--gray-5);
+
+  line-height: 1;
+}
+
+.MainSemiBold18 {
+  font-size: 18px;
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--main);
+
+  line-height: 1;
+}
+
+.Button {
+  width: 36px;
+  height: 48px;
+
+  border-radius: 10px;
+  background-color: var(--main);
+}
+.Button:hover img {
+  content: url("/images/game/icon-shopping-bag-filled-white.svg");
+}
+
+.FilledIconHover:hover img {
+  content: url("/images/game/icon-shopping-bag-white.svg");
+}

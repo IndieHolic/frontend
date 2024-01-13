@@ -1,0 +1,18 @@
+.NotifictionRoot {
+  margin-top: 16px;
+  padding: 10px;
+}
+
+.DefaultNotiRoot {
+  margin-top: 16px;
+  padding: 10px;
+  padding-left: 22px;
+}
+
+.NotifictionIcon {
+  margin-right: 16px;
+}
+
+.NotifictionTitle {
+  margin-bottom: 2px;
+}

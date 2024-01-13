@@ -1,0 +1,140 @@
+.Container {
+  width: 350px;
+  padding: 16px;
+
+  border-radius: 10px;
+  background-color: var(--gray-1);
+}
+
+.BlackExtraLight20 {
+  font-size: 20px;
+  font-weight: var(--font-weight-extra-light);
+  color: black;
+
+  line-height: 1;
+}
+
+.InfoText {
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  color: black;
+
+  line-height: 1.5;
+}
+
+.BlackRegular14 {
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  color: black;
+
+  line-height: 1;
+}
+
+.LinkText {
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  color: var(--main);
+
+  line-height: 1;
+}
+.LinkText:hover {
+  text-decoration: underline;
+}
+
+.Gray6Regular14 {
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  color: var(--gray-6);
+
+  line-height: 1;
+}
+
+.FlexBox {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 106px;
+
+  row-gap: 8px;
+  column-gap: 10px;
+
+  overflow-y: hidden;
+}
+
+.TagBox {
+  height: 30px;
+  padding: 7px;
+
+  border: 1px solid var(--gray-4);
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  color: var(--gray-6);
+
+  line-height: 1;
+}
+
+.PurchaseButton {
+  width: 205px;
+  height: 63px;
+
+  border-radius: 10px;
+  background-color: var(--main);
+}
+.PurchaseButton:hover {
+  background-color: var(--main-dark);
+}
+
+.DiscountBox {
+  padding: 9px 4px;
+
+  border-radius: 10px;
+  background-color: white;
+
+  font-size: 14px;
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--main);
+
+  line-height: 1;
+}
+
+.Gray2Regular14 {
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  color: var(--gray-2);
+
+  line-height: 1;
+}
+
+.WhiteSemiBold20 {
+  font-size: 20px;
+  font-weight: var(--font-weight-semi-bold);
+  color: white;
+
+  line-height: 1;
+}
+
+.WhiteSemiBold22 {
+  font-size: 22px;
+  font-weight: var(--font-weight-semi-bold);
+  color: white;
+
+  line-height: 1;
+}
+
+.PremiumButton {
+  width: 130px;
+  height: 63px;
+
+  border: 1px solid var(--main);
+  border-radius: 10px;
+}
+
+.SBAggroMainBold20 {
+  font-family: "SBAggroB";
+  font-size: 20px;
+  font-weight: var(--font-weight-bold);
+  color: var(--main);
+
+  line-height: 1;
+}

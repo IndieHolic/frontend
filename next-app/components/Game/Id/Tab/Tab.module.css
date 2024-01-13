@@ -1,0 +1,27 @@
+.TabItem {
+  padding: 9px 24px;
+
+  border-bottom: 2px solid var(--gray-2);
+
+  font-size: 20px;
+  font-weight: var(--font-weight-extra-light);
+  color: black;
+
+  line-height: 1;
+}
+.TabItem:hover {
+  background-color: var(--light-gray);
+}
+
+.ActiveTab {
+  border-bottom: 2px solid var(--main);
+  font-weight: var(--font-weight-regular);
+}
+
+.TabExtra {
+  height: 40px;
+
+  border-bottom: 2px solid var(--gray-2);
+
+  flex-grow: 1;
+}
