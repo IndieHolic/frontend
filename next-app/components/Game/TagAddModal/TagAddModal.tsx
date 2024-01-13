@@ -13,10 +13,13 @@ import {
   UnstyledButton,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { IconChevronRight } from "@tabler/icons-react";
+import { IconChevronRight, IconPlus } from "@tabler/icons-react";
 import { useState } from "react";
 
-export function TagAddModal() {
+interface TagAddModalProps {
+  location: string;
+}
+export function TagAddModal({ location }: TagAddModalProps) {
   const [opened, { open, close }] = useDisclosure(false);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
 
@@ -194,12 +197,19 @@ export function TagAddModal() {
         </Button>
       </Modal>
 
-      <UnstyledButton onClick={open}>
-        <Group gap={5}>
-          <Text className={classes.BlackExtraLight18}>태그</Text>
-          <IconChevronRight size={18} stroke={1} />
-        </Group>
-      </UnstyledButton>
+      {location === "all-game" && (
+        <UnstyledButton onClick={open}>
+          <Group gap={5}>
+            <Text className={classes.BlackExtraLight18}>태그</Text>
+            <IconChevronRight size={18} stroke={1} />
+          </Group>
+        </UnstyledButton>
+      )}
+      {location === "game-info" && (
+        <UnstyledButton className={classes.TagPlus} onClick={open}>
+          <IconPlus size={18} color="#808080" stroke={1} />
+        </UnstyledButton>
+      )}
     </>
   );
 }

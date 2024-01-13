@@ -14,7 +14,7 @@ import {
   UnstyledButton,
 } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { TagAddModal } from "./TagAddModal/TagAddModal";
+import { TagAddModal } from "../../TagAddModal/TagAddModal";
 
 export function GameFilter() {
   const genreOptions = [
@@ -67,7 +67,7 @@ export function GameFilter() {
           <Divider w={"100%"} color="#E6E6E6" />
           <CheckboxCollapse title="가격" option={priceOptions} />
           <Divider w={"100%"} color="#E6E6E6" />
-          <TagAddModal />
+          <TagAddModal location="all-game" />
           <Divider w={"100%"} color="#E6E6E6" />
           <CheckboxCollapse title="이용 등급" option={limitOptions} />
         </Stack>

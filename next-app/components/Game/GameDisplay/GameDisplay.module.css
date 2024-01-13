@@ -112,6 +112,6 @@
   content: url("/images/game/icon-shopping-bag-filled-white.svg");
 }
 
-.ActiveButton:hover img {
+.FilledIconHover:hover img {
   content: url("/images/game/icon-shopping-bag-white.svg");
 }

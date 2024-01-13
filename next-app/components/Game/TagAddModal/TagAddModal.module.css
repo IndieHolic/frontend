@@ -84,3 +84,12 @@
 .CompleteButton:hover {
   background-color: var(--main-dark);
 }
+
+.TagPlus {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+
+  border: 1px solid var(--gray-4);
+  border-radius: 10px;
+}
