@@ -1,0 +1,71 @@
+.Slide {
+  position: relative;
+  width: 112px;
+  height: 63px;
+}
+
+.SlideOverlay {
+  border-radius: 10px;
+}
+
+.SlideImage {
+  width: 112px;
+  height: 63px;
+  min-height: 63px;
+
+  border-radius: 10px;
+}
+
+.ImageBorder {
+  position: absolute;
+  width: 112px;
+  height: 63px;
+
+  border: 2px solid var(--main);
+  border-radius: 10px;
+}
+
+.Image {
+  width: 800px;
+  height: 450px;
+  min-height: 450px;
+  max-height: 450px;
+
+  border-radius: 10px;
+}
+
+.CarouselRoot {
+  display: flex;
+  justify-content: center;
+}
+.CarouselViewport {
+  width: 620px;
+  border-radius: 10px;
+}
+.CarouselIndicators {
+  bottom: -13px;
+}
+.CarouselIndicator {
+  width: 15px;
+  height: 7px;
+
+  background-color: var(--gray-2);
+
+  transition: width 250ms ease;
+  opacity: 1;
+}
+.CarouselIndicator:hover {
+  background-color: var(--gray-3);
+}
+.CarouselIndicator[data-active] {
+  width: 55px;
+  background-color: var(--main);
+}
+.CarouselControls {
+  padding: 0 10px;
+}
+.CarouselControl {
+  box-shadow: none;
+  background-color: var(--gray-1);
+  opacity: 1;
+}
