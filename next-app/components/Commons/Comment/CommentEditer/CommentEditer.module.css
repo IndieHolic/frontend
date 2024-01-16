@@ -1,0 +1,40 @@
+.Avatar {
+  border-radius: 23px;
+  background-color: var(--gray-1);
+}
+
+.EditerBox {
+  display: flex;
+  flex-grow: 1;
+  min-height: 46px;
+  padding: 10px 12px;
+
+  border: 1px solid var(--gray-3);
+  border-radius: 10px;
+
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.RichTextEditorRoot {
+  flex-grow: 1;
+  margin-top: 2px;
+
+  border: none;
+}
+
+.RichTextEditorRoot p[data-placeholder] {
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  color: var(--gray-6);
+
+  line-height: 1.5;
+}
+
+.RichTextEditorRoot p {
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  color: black;
+
+  line-height: 1.5;
+}

@@ -1,0 +1,16 @@
+.Button {
+  width: 800px;
+  height: 36px;
+
+  border-radius: 10px;
+  background-color: var(--gray-1);
+
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  color: black;
+
+  line-height: 1;
+}
+.Button:hover {
+  background-color: var(--gray-2);
+}

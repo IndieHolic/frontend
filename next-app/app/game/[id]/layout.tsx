@@ -1,29 +1,25 @@
-"use client";
-
 import { ContentWrapper } from "@/components/Commons/ContentWrapper/ContentWrapper";
 import { Collection } from "@/components/Game/Collection/Collection";
 import { DLCContainer } from "@/components/Game/Id/DLCContainer/DLCContainer";
 import { DeliberationGrade } from "@/components/Game/Id/DeliberationGrade/DeliberationGrade";
 import { GameInfo } from "@/components/Game/Id/GameInfo/GameInfo";
+import { GamePreview } from "@/components/Game/Id/GamePreview/GamePreview";
 import { SNSShortCut } from "@/components/Game/Id/SNSShortCut/SNSShortCut";
 import { Specification } from "@/components/Game/Id/Specification/Specification";
 import { Tab } from "@/components/Game/Id/Tab/Tab";
 import { Box, Group, Image, Stack, Text } from "@mantine/core";
-import { useState } from "react";
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
 export default function Layout({ children }: LayoutProps) {
-  const [activeTab, setActiveTab] = useState<string>("소개");
-
   return (
     <ContentWrapper>
       <Stack gap={0}>
         {/* 상단 */}
         <Group align="flex-start" gap={18} mt={20}>
-          <Stack gap={12}>
+          <Stack gap={13}>
             <Group gap={14}>
               <Image
                 w={60}
@@ -35,7 +31,7 @@ export default function Layout({ children }: LayoutProps) {
                 게임 이름
               </Text>
             </Group>
-            <Box w={800}></Box>
+            <GamePreview />
           </Stack>
           <Stack gap={20}>
             <GameInfo />
@@ -44,8 +40,8 @@ export default function Layout({ children }: LayoutProps) {
         </Group>
         {/* 메인 파트 */}
         <Group align="flex-start" gap={18} mt={60}>
-          <Stack gap={24}>
-            <Tab activeTab={activeTab} setActiveTab={setActiveTab} />
+          <Stack gap={20}>
+            <Tab />
             <Box w={800}>{children}</Box>
           </Stack>
           <Stack gap={20} mt={38}>

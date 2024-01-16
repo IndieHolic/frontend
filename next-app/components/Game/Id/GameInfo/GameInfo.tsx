@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import classes from "./GameInfo.module.css";
 import {

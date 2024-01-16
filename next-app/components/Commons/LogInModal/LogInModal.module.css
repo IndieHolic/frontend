@@ -82,20 +82,3 @@
 .LinkText:hover {
   text-decoration: underline;
 }
-
-.ImageUser {
-  display: flex;
-  align-items: center;
-  gap: 3px;
-}
-.ImageUser:hover img {
-  content: url("/images/header/icon-user-filled.svg");
-}
-
-.BlackRegular14 {
-  font-size: 14px;
-  font-weight: var(--font-weight-regular);
-  color: black;
-
-  line-height: 1;
-}

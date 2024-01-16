@@ -39,7 +39,7 @@
   line-height: 1;
 }
 
-.Button {
+.TagButton {
   height: 30px;
   padding: 7px;
 
@@ -53,11 +53,11 @@
 
   line-height: 1;
 }
-.Button:hover {
+.TagButton:hover {
   background-color: var(--gray-1);
 }
 
-.ActiveButton {
+.SelectedTag {
   padding: 8px;
 
   border: none;
@@ -65,11 +65,11 @@
 
   color: white;
 }
-.ActiveButton:hover {
+.SelectedTag:hover {
   background-color: var(--main-dark);
 }
 
-.CompleteButton {
+.Button {
   width: 368px;
   height: 52px;
 
@@ -81,8 +81,16 @@
   font-weight: var(--font-weight-bold);
   color: white;
 }
-.CompleteButton:hover {
+.Button:hover {
   background-color: var(--main-dark);
+}
+
+.BlackExtraLight14 {
+  font-size: 14px;
+  font-weight: var(--font-weight-extra-light);
+  color: black;
+
+  line-height: 1;
 }
 
 .TagPlus {

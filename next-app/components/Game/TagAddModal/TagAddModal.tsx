@@ -53,8 +53,8 @@ export function TagAddModal({ location }: TagAddModalProps) {
 
   const controlTags = controlList.map((item) => (
     <Button
-      className={`${classes.Button} ${
-        selectedTags.includes(item) && classes.ActiveButton
+      className={`${classes.TagButton} ${
+        selectedTags.includes(item) && classes.SelectedTag
       }`}
       onClick={() => {
         if (selectedTags.includes(item)) {
@@ -74,8 +74,8 @@ export function TagAddModal({ location }: TagAddModalProps) {
 
   const gameDesignTags = gameDesignList.map((item) => (
     <Button
-      className={`${classes.Button} ${
-        selectedTags.includes(item) && classes.ActiveButton
+      className={`${classes.TagButton} ${
+        selectedTags.includes(item) && classes.SelectedTag
       }`}
       onClick={() => {
         if (selectedTags.includes(item)) {
@@ -95,8 +95,8 @@ export function TagAddModal({ location }: TagAddModalProps) {
 
   const gameSystemTags = gameSystemList.map((item) => (
     <Button
-      className={`${classes.Button} ${
-        selectedTags.includes(item) && classes.ActiveButton
+      className={`${classes.TagButton} ${
+        selectedTags.includes(item) && classes.SelectedTag
       }`}
       onClick={() => {
         if (selectedTags.includes(item)) {
@@ -116,8 +116,8 @@ export function TagAddModal({ location }: TagAddModalProps) {
 
   const eventTags = eventList.map((item) => (
     <Button
-      className={`${classes.Button} ${
-        selectedTags.includes(item) && classes.ActiveButton
+      className={`${classes.TagButton} ${
+        selectedTags.includes(item) && classes.SelectedTag
       }`}
       onClick={() => {
         if (selectedTags.includes(item)) {
@@ -188,19 +188,20 @@ export function TagAddModal({ location }: TagAddModalProps) {
         </Stack>
         <Divider color="#E6E6E6" w={"100%"} />
         <Button
-          className={classes.CompleteButton}
+          className={classes.Button}
           onClick={() => close}
           variant="filled"
           mt={18}
         >
-          태그 저장
+          태그 선택 완료
         </Button>
       </Modal>
 
       {location === "all-game" && (
         <UnstyledButton onClick={open}>
-          <Group gap={5}>
+          <Group gap={4}>
             <Text className={classes.BlackExtraLight18}>태그</Text>
+            <Text className={classes.BlackExtraLight14}>(2개 선택됨)</Text>
             <IconChevronRight size={18} stroke={1} />
           </Group>
         </UnstyledButton>
