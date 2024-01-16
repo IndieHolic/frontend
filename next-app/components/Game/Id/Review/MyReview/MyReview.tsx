@@ -14,6 +14,7 @@ import {
   Stack,
   Text,
   TypographyStylesProvider,
+  UnstyledButton,
 } from "@mantine/core";
 import { RichTextEditor } from "@mantine/tiptap";
 import {
@@ -26,14 +27,16 @@ import {
 import Placeholder from "@tiptap/extension-placeholder";
 import { useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useDisclosure } from "@mantine/hooks";
 import { Comment } from "@/components/Commons/Comment/Comment";
+import { AuthContext } from "@/components/Commons/AuthProvider/AuthProvider";
 
 interface MyReviewProps {
   state: string;
 }
 export function MyReview({ state }: MyReviewProps) {
+  const { openLogInModal } = useContext(AuthContext);
   const [opened, { toggle }] = useDisclosure(false);
 
   const [edit, setEdit] = useState<boolean>(false);
@@ -51,7 +54,16 @@ export function MyReview({ state }: MyReviewProps) {
     <>
       {state === "login" && (
         <Box className={classes.AnnounceBox}>
-          리뷰를 작성하시려면 로그인 해주세요.
+          <Group gap={3}>
+            <Text className={classes.BlackRegular14}>리뷰를 작성하시려면</Text>
+            <UnstyledButton
+              className={classes.LogInText}
+              onClick={openLogInModal}
+            >
+              로그인
+            </UnstyledButton>
+            <Text className={classes.BlackRegular14}>해주세요.</Text>
+          </Group>
         </Box>
       )}
       {state === "non-play" && (

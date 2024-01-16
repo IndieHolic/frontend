@@ -1,10 +1,15 @@
+"use client";
+
+import { AuthContext } from "@/components/Commons/AuthProvider/AuthProvider";
 import classes from "./Header.module.css";
-import { Box, Group, Image, Text } from "@mantine/core";
+import { Box, Group, Image, Text, UnstyledButton } from "@mantine/core";
 import { IconSearch } from "@tabler/icons-react";
 import Link from "next/link";
-import { LogInModal } from "../LogInModal/LogInModal";
+import { useContext } from "react";
 
 export function Header() {
+  const { openLogInModal } = useContext(AuthContext);
+
   return (
     <Box className={classes.Container}>
       <Box className={classes.Wrapper}>
@@ -43,7 +48,13 @@ export function Header() {
           <Link className={classes.ImageBell} href="/">
             <Image src="/images/header/icon-bell.svg" />
           </Link>
-          <LogInModal />
+          <UnstyledButton
+            className={classes.ImageUser}
+            onClick={openLogInModal}
+          >
+            <Image src="/images/header/icon-user.svg" />
+            <Text className={classes.BlackRegular14}>로그인</Text>
+          </UnstyledButton>
         </Group>
       </Box>
     </Box>

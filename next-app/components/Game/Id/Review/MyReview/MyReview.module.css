@@ -6,14 +6,27 @@
   border: 1px solid var(--gray-3);
   border-radius: 10px;
 
+  align-items: center;
+  justify-content: center;
+}
+
+.BlackRegular14 {
   font-size: 14px;
   font-weight: var(--font-weight-regular);
   color: black;
 
   line-height: 1;
+}
 
-  align-items: center;
-  justify-content: center;
+.LogInText {
+  font-size: 14px;
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--main);
+
+  line-height: 1;
+}
+.LogInText:hover {
+  text-decoration: underline;
 }
 
 .Avatar {
@@ -120,14 +133,6 @@
 }
 .Button:hover {
   background-color: var(--light-gray);
-}
-
-.BlackRegular14 {
-  font-size: 14px;
-  font-weight: var(--font-weight-regular);
-  color: black;
-
-  line-height: 1;
 }
 
 .MenuDropdown {

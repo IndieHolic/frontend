@@ -7,7 +7,7 @@ import { Divider, Stack } from "@mantine/core";
 export default function Home() {
   return (
     <Stack gap={20}>
-      <MyReview state="empty" />
+      <MyReview state="login" />
       <Stack align="flex-end" gap={16}>
         <Divider w={"100%"} color="#E6E6E6" />
         <ReviewSort />

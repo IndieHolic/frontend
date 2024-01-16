@@ -11,6 +11,7 @@ import Pretendard from "next/font/local";
 import { MantineProvider } from "@mantine/core";
 import { AppShell } from "@/components/AppShell/AppShell";
 import { Notifications } from "@mantine/notifications";
+import { AuthProvider } from "@/components/Commons/AuthProvider/AuthProvider";
 
 // 공용 폰트 정의
 const pretendard = Pretendard({
@@ -59,8 +60,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
       </head>
       <body className={pretendard.className}>
         <MantineProvider>
-          <Notifications />
-          <AppShell>{children}</AppShell>
+          <AuthProvider>
+            <Notifications />
+            <AppShell>{children}</AppShell>
+          </AuthProvider>
         </MantineProvider>
       </body>
     </html>
