@@ -15,7 +15,9 @@
 
 .ActiveTab {
   border-bottom: 2px solid var(--main);
-  font-weight: var(--font-weight-regular);
+
+  color: var(--main);
+  font-weight: var(--font-weight-light);
 }
 
 .TabExtra {

@@ -85,7 +85,7 @@ export function CheckboxCollapse({ title, option }: CheckboxCollapseProps) {
 
   const checkboxOptions = option.map((item) => {
     return (
-      <Group gap={"10px"}>
+      <Group key={item} gap={"10px"}>
         <Checkbox
           classNames={{ inner: classes.CheckboxInner }}
           color="#138BCF"
