@@ -67,6 +67,7 @@ export function TagAddModal({ location }: TagAddModalProps) {
           setSelectedTags((prev) => [...prev, item]);
         }
       }}
+      key={item}
     >
       {item}
     </Button>
@@ -88,6 +89,7 @@ export function TagAddModal({ location }: TagAddModalProps) {
           setSelectedTags((prev) => [...prev, item]);
         }
       }}
+      key={item}
     >
       {item}
     </Button>
@@ -109,6 +111,7 @@ export function TagAddModal({ location }: TagAddModalProps) {
           setSelectedTags((prev) => [...prev, item]);
         }
       }}
+      key={item}
     >
       {item}
     </Button>
@@ -130,6 +133,7 @@ export function TagAddModal({ location }: TagAddModalProps) {
           setSelectedTags((prev) => [...prev, item]);
         }
       }}
+      key={item}
     >
       {item}
     </Button>

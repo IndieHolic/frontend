@@ -11,8 +11,8 @@ export function Tab() {
 
   const [activeTab, setActiveTab] = useState<string>("");
   useEffect(() => {
-    if (pathname.endsWith("announce")) setActiveTab("공지");
-    else if (pathname.endsWith("review")) setActiveTab("리뷰");
+    if (pathname.includes("announce")) setActiveTab("공지");
+    else if (pathname.includes("review")) setActiveTab("리뷰");
     else setActiveTab("소개");
   }, [pathname]);
 

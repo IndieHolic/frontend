@@ -1,0 +1,23 @@
+.Image {
+  min-width: 160px;
+  width: 160px;
+  height: 90px;
+
+  border-radius: 10px;
+}
+
+.BlackSemibold20 {
+  font-size: 20px;
+  font-weight: var(--font-weight-semi-bold);
+  color: black;
+
+  line-height: 1;
+}
+
+.Gray5Regular14 {
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  color: var(--gray-5);
+
+  line-height: 1;
+}

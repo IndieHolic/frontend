@@ -9,7 +9,6 @@ import {
   Divider,
   Group,
   Menu,
-  Spoiler,
   Stack,
   Text,
   TypographyStylesProvider,
@@ -87,28 +86,21 @@ export function Comment({ canEdit, hasReply }: CommentProps) {
                 </Stack>
                 <Text className={classes.Gray5Regular14}>14시간 전</Text>
               </Group>
-              <Spoiler
-                classNames={{ control: classes.Gray5Regular14 }}
-                maxHeight={63}
-                showLabel="더보기"
-                hideLabel="숨기기"
-              >
-                <TypographyStylesProvider className={classes.Typography}>
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html:
-                        "<p>Your html here</p><p>Your html here</p><p>Your html here</p><p>Your html here</p>",
-                    }}
-                  />
-                </TypographyStylesProvider>
-              </Spoiler>
+              <TypographyStylesProvider className={classes.Typography}>
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html:
+                      "<p>Your html here</p><p>Your html here</p><p>Your html here</p><p>Your html here</p>",
+                  }}
+                />
+              </TypographyStylesProvider>
               {/* 하단 버튼 삼총사 */}
-              <Group justify={hasReply ? "space-between" : "flex-end"} mt={16}>
+              <Group justify={hasReply ? "space-between" : "flex-end"}>
                 {hasReply && (
                   <Button className={classes.Button} onClick={toggle}>
                     <Group gap={8}>
                       <IconMessage size={20} color="#000" stroke={1} />
-                      <Text className={classes.BlackRegular14}>답글</Text>
+                      <Text className={classes.BlackRegular14}>댓글</Text>
                     </Group>
                   </Button>
                 )}

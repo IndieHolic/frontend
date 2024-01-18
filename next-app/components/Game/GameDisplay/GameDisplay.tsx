@@ -14,7 +14,7 @@ import Link from "next/link";
 
 export function GameDisplay() {
   return (
-    <Link href="/" target="_blank">
+    <Link href="/game/1234" target="_blank">
       <Box className={classes.Container}>
         <Stack gap={0}>
           <Box className={classes.Relative}>

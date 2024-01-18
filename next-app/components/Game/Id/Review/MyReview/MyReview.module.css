@@ -114,9 +114,18 @@
   line-height: 1;
 }
 
+.Typography {
+  margin: 0;
+  padding: 0;
+}
 .Typography p {
+  margin: 0;
+
   font-size: 14px;
-  line-height: 1.5;
+  font-weight: var(--font-weight-regular);
+  color: black;
+
+  line-height: 1.6;
 }
 
 .Button {

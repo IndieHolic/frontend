@@ -25,7 +25,9 @@ export function GameInfo() {
   ];
 
   const tagItems = tagList.map((item) => (
-    <Box className={classes.TagBox}>{item}</Box>
+    <Box key={item} className={classes.TagBox}>
+      {item}
+    </Box>
   ));
 
   const isDiscount = true;

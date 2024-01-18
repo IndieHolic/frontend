@@ -45,7 +45,6 @@ export function GamePreview() {
       <Carousel
         w={720}
         height={63}
-        align="start"
         loop
         withIndicators
         controlSize={30}

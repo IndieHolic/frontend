@@ -8,12 +8,17 @@ import StarterKit from "@tiptap/starter-kit";
 import { RichTextEditor } from "@mantine/tiptap";
 import Placeholder from "@tiptap/extension-placeholder";
 
-export function CommentEditer() {
+interface CommentEditerProps {
+  isReview?: boolean;
+}
+export function CommentEditer({ isReview = false }: CommentEditerProps) {
   const editor = useEditor({
     extensions: [
       StarterKit,
       Placeholder.configure({
-        placeholder: "솔직한 리뷰를 남겨주세요.",
+        placeholder: isReview
+          ? "솔직한 리뷰를 남겨주세요."
+          : "댓글을 남겨주세요.",
       }),
     ],
     content: "",

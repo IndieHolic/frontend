@@ -28,7 +28,7 @@
   font-weight: var(--font-weight-regular);
   color: var(--gray-6);
 
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .RichTextEditorRoot p {
@@ -36,5 +36,5 @@
   font-weight: var(--font-weight-regular);
   color: black;
 
-  line-height: 1.5;
+  line-height: 1.6;
 }

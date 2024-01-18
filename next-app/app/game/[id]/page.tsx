@@ -1,9 +1,9 @@
-import { TypographyStylesProvider } from "@mantine/core";
+import { TypoStyle } from "@/components/Commons/TypoStyle/TypoStyle";
 
 export default function Home() {
   return (
-    <TypographyStylesProvider>
+    <TypoStyle>
       <div dangerouslySetInnerHTML={{ __html: "<p>Your html here</p>" }} />
-    </TypographyStylesProvider>
+    </TypoStyle>
   );
 }
