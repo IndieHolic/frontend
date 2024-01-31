@@ -61,6 +61,14 @@
   background-color: var(--main-dark);
 }
 
+.Disabled {
+  background-color: var(--gray-2);
+  color: var(--gray-6);
+}
+.Disabled:hover {
+  background-color: var(--gray-2);
+}
+
 .MainRegular12 {
   font-size: 12px;
   font-weight: var(--font-weight-regular);
