@@ -1,11 +1,11 @@
 import { ClientAxios } from "@/utils/api/ClientAxios";
 
-export interface sendVerifyEmailRes {
+export interface SendVerifyEmailRes {
   verifyId: number;
 }
 
 export async function sendVerifyEmail(email: string) {
-  const res = await ClientAxios.post<sendVerifyEmailRes>(
+  const res = await ClientAxios.post<SendVerifyEmailRes>(
     "/auth/send-verify",
     undefined,
     {
@@ -16,7 +16,7 @@ export async function sendVerifyEmail(email: string) {
   return res.data;
 }
 
-export interface registerArgs {
+export interface RegisterArgs {
   name: string;
   email: string;
   userId: string;
@@ -25,28 +25,28 @@ export interface registerArgs {
   agreeMarketing: boolean;
 }
 
-export async function register(registerArgs: registerArgs) {
+export async function register(registerArgs: RegisterArgs) {
   await ClientAxios.post("/auth/register", registerArgs);
 }
 
-export interface checkVerifyRes {
+export interface CheckVerifyRes {
   isVerified: boolean;
 }
 
 export async function checkVerify(verifyId: number) {
-  const res = await ClientAxios.get<checkVerifyRes>("/auth/check-verify", {
+  const res = await ClientAxios.get<CheckVerifyRes>("/auth/check-verify", {
     params: { verifyId },
   });
 
   return res.data;
 }
 
-export interface checkIdDuplicateRes {
+export interface CheckIdDuplicateRes {
   isExist: boolean;
 }
 
 export async function checkIdDuplicate(id: string) {
-  const res = await ClientAxios.get<checkIdDuplicateRes>("/auth/check-id", {
+  const res = await ClientAxios.get<CheckIdDuplicateRes>("/auth/check-id", {
     params: { userId: id },
   });
 
