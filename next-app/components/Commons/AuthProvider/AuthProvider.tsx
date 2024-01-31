@@ -15,13 +15,21 @@ interface AuthContextType {
   user: User | null;
   openLogInModal: () => void;
   token: string | null;
-  login: (token: string, keepLoggedIn: boolean) => void;
+  login: (userId: string, password: string, keepLoggedIn: boolean) => void;
   logout: () => void;
   isLoggedIn: boolean;
   isLoading: boolean;
 }
 
-export const AuthContext = createContext<AuthContextType | null>(null);
+export const AuthContext = createContext<AuthContextType>({
+  user: null,
+  openLogInModal: () => {},
+  token: null,
+  login: () => {},
+  logout: () => {},
+  isLoggedIn: false,
+  isLoading: false,
+});
 
 interface AuthProviderProps {
   children: React.ReactNode;
@@ -31,6 +39,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
   const [user, setUser] = useState<User | null>(null);
   const [isLoadingCookie, setIsLoadingCookie] = useState(true);
   const [isLoadingUser, setIsLoadingUser] = useState(true);
+  const [isLoadingLogin, setIsLoadingLogin] = useState(false);
   const [
     isLogiInModalopened,
     { open: openLogInModal, close: closeLogInModal },
@@ -40,7 +49,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
     setIsLoadingUser(true);
 
     try {
-      const { data } = await ClientAxios.get<User>("/users/me", {
+      const { data } = await ClientAxios.get<User>("/user/me", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setUser(data);
@@ -67,13 +76,28 @@ export function AuthProvider({ children }: AuthProviderProps) {
     setIsLoadingCookie(false);
   }, [fetchAndSetUser, token]);
 
-  const login = (token: string, keepLoggedIn: boolean) => {
+  const login = async (
+    userId: string,
+    password: string,
+    keepLoggedIn: boolean
+  ) => {
+    setIsLoadingLogin(true);
+
+    const res = await ClientAxios.post<{
+      accessToken: string;
+    }>("/auth/login", {
+      userId,
+      password,
+    });
+    const token = res.data.accessToken;
+    setToken(token);
+
+    setIsLoadingLogin(false);
     setIsLoadingCookie(true);
 
-    setToken(token);
     ClientAxios.defaults.headers.Authorization = `Bearer ${token}`;
     Cookies.set(JWT_COOKIE_NAME, token, {
-      "max-age": keepLoggedIn ? JWT_MAX_AGE : undefined,
+      expires: keepLoggedIn ? JWT_MAX_AGE : undefined,
     });
     fetchAndSetUser(token);
 
@@ -100,7 +124,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
         login,
         logout,
         isLoggedIn: !!token,
-        isLoading: isLoadingCookie || isLoadingUser,
+        isLoading: isLoadingCookie || isLoadingUser || isLoadingLogin,
       }}
     >
       <LogInModal opened={isLogiInModalopened} close={closeLogInModal} />

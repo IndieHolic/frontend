@@ -1,6 +1,8 @@
 .ModalContent {
+  padding-top: 30px;
+
   width: 400px;
-  height: 368px;
+  height: 420px;
 
   border-radius: 10px;
 
@@ -63,6 +65,13 @@
   background-color: var(--main-dark);
 }
 
+.CancelButton {
+  background-color: var(--highlight);
+}
+.CancelButton:hover {
+  background-color: var(--highlight-dark);
+}
+
 .VerifyButton {
   width: 103px;
   height: 52px;
@@ -77,4 +86,12 @@
 }
 .VerifyButton:hover {
   background-color: var(--main-dark);
+}
+
+.Disabled {
+  background-color: var(--gray-2);
+  color: var(--gray-6);
+}
+.Disabled:hover {
+  background-color: var(--gray-2);
 }

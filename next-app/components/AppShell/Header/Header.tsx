@@ -8,7 +8,7 @@ import Link from "next/link";
 import { useContext } from "react";
 
 export function Header() {
-  const { openLogInModal } = useContext(AuthContext);
+  const { openLogInModal, isLoggedIn, user } = useContext(AuthContext);
 
   return (
     <Box className={classes.Container}>
@@ -50,10 +50,15 @@ export function Header() {
           </Link>
           <UnstyledButton
             className={classes.ImageUser}
-            onClick={openLogInModal}
+            onClick={() => {
+              if (isLoggedIn) return;
+              openLogInModal();
+            }}
           >
             <Image src="/images/header/icon-user.svg" />
-            <Text className={classes.BlackRegular14}>로그인</Text>
+            <Text className={classes.BlackRegular14}>
+              {isLoggedIn ? user?.name : "로그인"}
+            </Text>
           </UnstyledButton>
         </Group>
       </Box>
