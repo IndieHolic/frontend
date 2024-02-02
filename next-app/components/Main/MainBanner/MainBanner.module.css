@@ -1,0 +1,12 @@
+.BackgroundImage {
+  display: flex;
+  justify-content: center;
+}
+
+.WhiteExtraBold64 {
+  font-size: 64px;
+  font-weight: var(--font-weight-extra-bold);
+  color: white;
+
+  line-height: 1;
+}
