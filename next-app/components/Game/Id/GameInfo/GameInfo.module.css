@@ -74,8 +74,13 @@
   line-height: 1;
 }
 
+.Tooltip {
+  padding: 5px 10px;
+  background-color: var(--gray-9);
+}
+
 .PurchaseButton {
-  width: 205px;
+  flex-grow: 1;
   height: 63px;
 
   border-radius: 10px;
@@ -128,6 +133,20 @@
 
   border: 1px solid var(--main);
   border-radius: 10px;
+}
+
+.PlayButton {
+  flex-grow: 1;
+  height: 63px;
+
+  border: 1px solid var(--main);
+  border-radius: 10px;
+
+  font-size: 24px;
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--main);
+
+  line-height: 1;
 }
 
 .SBAggroMainBold20 {

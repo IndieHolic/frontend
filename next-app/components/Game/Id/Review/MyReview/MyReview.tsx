@@ -10,12 +10,12 @@ import {
   Divider,
   Group,
   Menu,
+  Rating,
   Stack,
   Text,
   TypographyStylesProvider,
   UnstyledButton,
 } from "@mantine/core";
-import { RichTextEditor } from "@mantine/tiptap";
 import {
   IconDotsVertical,
   IconMessage,
@@ -23,35 +23,23 @@ import {
   IconThumbUp,
   IconUserCircle,
 } from "@tabler/icons-react";
-import Placeholder from "@tiptap/extension-placeholder";
-import { useEditor } from "@tiptap/react";
-import StarterKit from "@tiptap/starter-kit";
 import { useContext, useState } from "react";
 import { useDisclosure } from "@mantine/hooks";
 import { Comment } from "@/components/Commons/Comment/Comment";
 import { AuthContext } from "@/components/Commons/AuthProvider/AuthProvider";
 
 interface MyReviewProps {
-  state: string;
+  variant: "login" | "non-play" | "empty" | "exist";
 }
-export function MyReview({ state }: MyReviewProps) {
+export function MyReview({ variant }: MyReviewProps) {
   const { openLogInModal } = useContext(AuthContext);
   const [opened, { toggle }] = useDisclosure(false);
 
   const [edit, setEdit] = useState<boolean>(false);
-  const editor = useEditor({
-    extensions: [
-      StarterKit,
-      Placeholder.configure({
-        placeholder: "솔직한 리뷰를 남겨주세요.",
-      }),
-    ],
-    content: "",
-  });
 
   return (
     <>
-      {state === "login" && (
+      {variant === "login" && (
         <Box className={classes.AnnounceBox}>
           <Group gap={3}>
             <Text className={classes.BlackRegular14}>리뷰를 작성하시려면</Text>
@@ -65,7 +53,7 @@ export function MyReview({ state }: MyReviewProps) {
           </Group>
         </Box>
       )}
-      {state === "non-play" && (
+      {variant === "non-play" && (
         <Group gap={12}>
           <Avatar className={classes.Avatar} size={46}>
             <IconUserCircle size={36} color="#B3B3B3" stroke={1} />
@@ -75,39 +63,31 @@ export function MyReview({ state }: MyReviewProps) {
           </Box>
         </Group>
       )}
-      {state === "empty" && <CommentEditer />}
-      {state === "exist" && (
+      {variant === "empty" && <CommentEditer variant="review" />}
+      {variant === "exist" && (
         <Menu classNames={{ item: classes.MenuItem }} position="bottom-end">
-          <Group align="flex-start" gap={12}>
-            <Avatar className={classes.Avatar} size={46}>
-              <IconUserCircle size={36} color="#B3B3B3" stroke={1} />
-            </Avatar>
-            {edit ? (
-              <Stack gap={10} style={{ flexGrow: 1 }}>
-                <Box className={classes.EditerBox}>
-                  <RichTextEditor
-                    classNames={{ root: classes.RichTextEditorRoot }}
-                    editor={editor}
-                  >
-                    <RichTextEditor.Content />
-                  </RichTextEditor>
-                </Box>
-                <Group justify="flex-end" gap={8}>
-                  <Button className={classes.EditButton}>수정</Button>
-                  <Button
-                    className={classes.CancelButton}
-                    onClick={() => {
-                      if (confirm("수정을 취소하시겠습니까?")) setEdit(false);
-                    }}
-                  >
-                    취소
-                  </Button>
-                </Group>
-              </Stack>
-            ) : (
+          {edit ? (
+            <CommentEditer
+              variant="review-edit"
+              onCancelClick={() => setEdit(false)}
+            />
+          ) : (
+            <Group align="flex-start" gap={12}>
+              <Avatar className={classes.Avatar} size={46}>
+                <IconUserCircle size={36} color="#B3B3B3" stroke={1} />
+              </Avatar>
               <Stack gap={16} mt={5} style={{ flexGrow: 1 }}>
                 <Group justify="space-between">
-                  <Text className={classes.BlackRegular16}>나의 리뷰</Text>
+                  <Stack justify="flex-start" gap={5}>
+                    <Text className={classes.MainSemiBold16}>나의 리뷰</Text>
+                    <Group gap={4}>
+                      <Text className={classes.Gray5Regular14}>
+                        14시간 플레이
+                      </Text>
+                      <Text className={classes.Gray5Regular14}>·</Text>
+                      <Rating size="xs" value={3.5} fractions={2} readOnly />
+                    </Group>
+                  </Stack>
                   <Text className={classes.Gray5Regular14}>14시간 전</Text>
                 </Group>
                 <TypographyStylesProvider className={classes.Typography}>
@@ -151,12 +131,12 @@ export function MyReview({ state }: MyReviewProps) {
                   <Stack gap={16}>
                     <Divider w={"100%"} color="#E6E6E6" />
                     <CommentEditer />
-                    <Comment canEdit={true} hasReply={false} />
+                    <Comment variant="review" canEdit={true} />
                   </Stack>
                 </Collapse>
               </Stack>
-            )}
-          </Group>
+            </Group>
+          )}
 
           <Menu.Dropdown className={classes.MenuDropdown}>
             <Menu.Item onClick={() => setEdit(true)}>수정하기</Menu.Item>

@@ -23,6 +23,40 @@
   border: none;
 }
 
+.EditButton {
+  height: 36px;
+  padding: 0px 10px;
+
+  border-radius: 10px;
+  background-color: var(--main);
+
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  color: white;
+
+  line-height: 1;
+}
+.EditButton:hover {
+  background-color: var(--main-dark);
+}
+
+.CancelButton {
+  height: 36px;
+  padding: 0px 10px;
+
+  border-radius: 10px;
+  background-color: var(--gray-2);
+
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  color: var(--gray-6);
+
+  line-height: 1;
+}
+.CancelButton:hover {
+  background-color: var(--gray-3);
+}
+
 .RichTextEditorRoot p[data-placeholder] {
   font-size: 14px;
   font-weight: var(--font-weight-regular);
@@ -37,4 +71,12 @@
   color: black;
 
   line-height: 1.6;
+}
+
+.MainRegular14 {
+  font-size: 14px;
+  font-weight: var(--font-weight-regular);
+  color: var(--main);
+
+  line-height: 1;
 }

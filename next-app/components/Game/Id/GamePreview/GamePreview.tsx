@@ -1,14 +1,11 @@
 "use client";
 
 import classes from "./GamePreview.module.css";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Stack, Image, Overlay, Box } from "@mantine/core";
 import { Carousel } from "@mantine/carousel";
-import Autoplay from "embla-carousel-autoplay";
 
 export function GamePreview() {
-  const autoplay = useRef(Autoplay({ delay: 5000 }));
-
   const imageList = [
     "/images/game/banner.png",
     "/images/game/christmas.png",
@@ -48,9 +45,6 @@ export function GamePreview() {
         loop
         withIndicators
         controlSize={30}
-        plugins={[autoplay.current]}
-        onMouseEnter={autoplay.current.stop}
-        onMouseLeave={autoplay.current.reset}
         onSlideChange={(index) => {
           setCurrentIndex(index);
         }}
