@@ -25,7 +25,7 @@ export function EachDLC({ isFirst = false }: EachDLCProps) {
   return (
     <Stack gap={16}>
       {!isFirst && <Divider w={"100%"} color="#E6E6E6" />}
-      <Link href="/">
+      <Link href="/game/1234">
         <Group justify="space-between" gap={12} w={318}>
           <Stack align="flex-start" justify="space-between" gap={0} h={48}>
             <Text className={classes.BlackRegular16} lineClamp={1}>

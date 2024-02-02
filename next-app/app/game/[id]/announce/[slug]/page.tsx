@@ -24,8 +24,8 @@ export default function Home() {
       <Stack align="flex-end" mt={8}>
         <Divider w={"100%"} color="#E6E6E6" />
         <ReviewSort />
-        <Comment canEdit={false} hasReply={true} />
-        <Comment canEdit={false} hasReply={true} />
+        <Comment variant="normal-reply" canEdit={false} />
+        <Comment variant="normal-reply" canEdit={false} />
         <ShowMoreButton />
       </Stack>
     </Stack>
