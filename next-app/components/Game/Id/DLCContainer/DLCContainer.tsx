@@ -8,7 +8,7 @@ export function DLCContainer() {
       <Stack gap={24}>
         <Text className={classes.BlackExtraLight20}>이 게임의 DLC</Text>
         <Stack gap={16}>
-          <EachDLC isFirst={true} />
+          {/* <EachDLC isFirst={true} /> */}
           <EachDLC />
         </Stack>
       </Stack>

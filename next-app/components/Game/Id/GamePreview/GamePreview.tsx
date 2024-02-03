@@ -7,14 +7,10 @@ import { Carousel } from "@mantine/carousel";
 
 export function GamePreview() {
   const imageList = [
-    "/images/game/banner.png",
-    "/images/game/christmas.png",
-    "/images/game/ALPO.jpg",
-    "/images/game/banner-icon.png",
-    "/images/game/banner.png",
-    "/images/game/christmas.png",
-    "/images/game/ALPO.jpg",
-    "/images/game/banner-icon.png",
+    "/images/game/111.png",
+    "/images/game/222.png",
+    "/images/game/333.png",
+    "/images/game/444.png",
   ];
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 

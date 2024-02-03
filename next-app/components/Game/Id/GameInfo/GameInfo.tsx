@@ -43,39 +43,34 @@ export function GameInfo() {
           <Stack gap={16}>
             {/* 첫 번째 섹션 */}
             <Text className={classes.InfoText} lineClamp={5}>
-              《화산의 딸》은 다양한 엔딩이 있는 육성 시뮬레이션 게임으로,
-              아내가 죽은 뒤 유일한 보호자가 된 당신은 딸을 정성껏 돌보고 키워야
-              합니다. 집 밖에서는 인간과 마족의 갈등이 갈수록 깊어지고 있습니다.
-              이때 마족의 수장인 미네르바가 다시 쳐들어온다면 화산국에서는
-              올바른 힘이 더욱 필요할 것입니다. 딸은 어떤 여성으로 성장할까요?
-              화산국의 미래는 어떻게 될까요? 당신의 선택 하나하나가 모두
-              중요합니다.
+              《Hexile》은 매 스테이지가 확장되는 전략 게임으로, 플레이어는
+              끊임없이 스폰되는 AI 적들과 맞서 싸워야 합니다. 폐허가 된
+              세계에서의 생존을 위해 자원을 수집하고, 미사일을 제작하여 적들을
+              물리치는 것이 궁극적인 목표입니다. 매 턴마다 자원을 확보하고,
+              전략적으로 타일을 구매하며, 고도로 맞춤화된 미사일로 적의 방어를
+              뚫어야 합니다. 적들의 타일을 점령하고 전쟁의 조류를 바꾸세요. 각
+              선택은 승리로 가는 길을 닦거나 패배의 함정에 빠뜨릴 수 있습니다.
+              전략가로서 당신의 지혜와 결정이 이 무너진 세계의 운명을
+              결정짓습니다. 과연 당신은 이 치열한 전투를 헤쳐나가 폐허 속에서
+              희망의 빛을 발견할 수 있을까요?
             </Text>
             <Divider w={"100%"} color="#E6E6E6" />
             {/* 두 번째 섹션 */}
             <Group justify="flex-start" gap={24}>
               <Stack align="flex-start" gap={12}>
                 <Text className={classes.BlackRegular14}>장르</Text>
-                <Text className={classes.BlackRegular14}>개발사</Text>
-                <Text className={classes.BlackRegular14}>배급사</Text>
                 <Text className={classes.BlackRegular14}>이용 등급</Text>
                 <Text className={classes.BlackRegular14}>출시일</Text>
                 <Text className={classes.BlackRegular14}>평점</Text>
               </Stack>
               <Stack align="flex-start" gap={12}>
                 <Link className={classes.LinkText} href="/">
-                  시뮬레이션
+                  전략 시뮬레이션
                 </Link>
                 <Link className={classes.LinkText} href="/">
-                  시뮬레이션
+                  12세이용가
                 </Link>
-                <Link className={classes.LinkText} href="/">
-                  시뮬레이션
-                </Link>
-                <Link className={classes.LinkText} href="/">
-                  시뮬레이션
-                </Link>
-                <Text className={classes.Gray6Regular14}>시뮬레이션</Text>
+                <Text className={classes.Gray6Regular14}>2024.01.05</Text>
                 <Group gap={4}>
                   <Rating size="xs" value={3.5} fractions={2} readOnly />
                   <Text className={classes.Gray6Regular14}>(3.5)</Text>
