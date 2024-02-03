@@ -11,14 +11,18 @@ import {
 import classes from "./GameDisplay.module.css";
 import { IconUserCircle } from "@tabler/icons-react";
 import Link from "next/link";
+import { game_display_data_type } from "@/constants/game-display";
 
-export function GameDisplay() {
+interface GameDisplayProps {
+  data: game_display_data_type;
+}
+export function GameDisplay({ data }: GameDisplayProps) {
   return (
     <Link href="/game/1234" target="_blank">
       <Box className={classes.Container}>
         <Stack gap={0}>
           <Box className={classes.Relative}>
-            <Image className={classes.Image} src="/images/game/ALPO.jpg" />
+            <Image className={classes.Image} src={data.thumbnail} />
             <Overlay
               className={classes.Overlay}
               color="#000"
@@ -26,10 +30,7 @@ export function GameDisplay() {
               blur={10}
             >
               <Text className={classes.WhiteRegular14} lineClamp={4}>
-                하늘 높은 곳에 살던 정령 'ALPO'가 모종의 이유로 중력이
-                마구잡이로 뒤바뀐 지하도시까지 떨어지게 됩니다. 다시 원래 있던
-                곳으로 돌아가기 위해 지하세계를 탐험하며 위로 올라갈 방법을
-                찾아야 하는 2D 플랫포머 게임입니다.
+                {data.description}
               </Text>
             </Overlay>
           </Box>
@@ -42,10 +43,10 @@ export function GameDisplay() {
           >
             <Stack gap={4}>
               <Text className={classes.Gray6Regular12} lineClamp={1}>
-                어드벤처
+                {data.genre.join(", ")}
               </Text>
               <Text className={classes.BlackBold16} lineClamp={2}>
-                ALPO Way Home
+                {data.title}
               </Text>
             </Stack>
             <Group w={"100%"} align="flex-end" justify="space-between" gap={8}>
@@ -55,24 +56,26 @@ export function GameDisplay() {
                     <IconUserCircle color="#B3B3B3" stroke={1} />
                   </Avatar>
                   <Text className={classes.Gray6Regular12} lineClamp={1}>
-                    Team Escape
+                    {data.developer}
                   </Text>
                 </Group>
                 <Group gap={6}>
                   <Box className={classes.DiscountBox}>-50%</Box>
                   <Stack align="flex-start" gap={1}>
-                    <Text className={classes.Gray6Regular10}>₩ 30,000</Text>
-                    <Text className={classes.MainSemiBold14}>₩ 15,000</Text>
+                    <Text className={classes.Gray6Regular10} h={10}>
+                      ₩ 5,000
+                    </Text>
+                    <Text className={classes.MainSemiBold14}>₩ 2,500</Text>
                   </Stack>
                 </Group>
               </Stack>
               <Button
                 className={`${classes.Button} ${
-                  true && classes.FilledIconHover
+                  false && classes.FilledIconHover
                 }`}
                 variant="filled"
               >
-                {false ? (
+                {true ? (
                   <Image src="/images/game/icon-shopping-bag-white.svg" />
                 ) : (
                   <Image src="/images/game/icon-shopping-bag-filled-white.svg" />

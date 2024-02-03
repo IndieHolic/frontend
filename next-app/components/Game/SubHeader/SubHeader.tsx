@@ -36,7 +36,9 @@ export function SubHeader({ children }: SubHeaderProps) {
             </Link>
             <Text className={classes.WhiteExtraLight18}>·</Text>
             <Link href="/">
-              <Text className={classes.WhiteExtraLight18}>크리스마스 특집</Text>
+              <Text className={classes.WhiteExtraLight18}>
+                AGORA 베타테스트 스페셜
+              </Text>
             </Link>
             <Text className={classes.WhiteExtraLight18}>·</Text>
             <Link href="/game/agora-premium">

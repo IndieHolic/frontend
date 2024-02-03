@@ -1,5 +1,9 @@
 "use client";
 
+import {
+  game_display_data,
+  game_display_data_type,
+} from "@/constants/game-display";
 import classes from "./Banner.module.css";
 import { Carousel } from "@mantine/carousel";
 import { Box, Image, Text, Stack, BackgroundImage } from "@mantine/core";
@@ -8,6 +12,10 @@ import { useRef } from "react";
 
 export function Banner() {
   const autoplay = useRef(Autoplay({ delay: 3000 }));
+
+  const slideList = game_display_data.map((item) => (
+    <BannerSlide data={item} />
+  ));
 
   return (
     <Carousel
@@ -28,29 +36,29 @@ export function Banner() {
         control: classes.CarouselControl,
       }}
     >
-      <BannerSlide />
-      <BannerSlide />
-      <BannerSlide />
-      <BannerSlide />
+      {slideList}
     </Carousel>
   );
 }
 
-export function BannerSlide() {
+interface BannerSlideProps {
+  data: game_display_data_type;
+}
+export function BannerSlide({ data }: BannerSlideProps) {
   return (
     <BackgroundImage
       className={classes.BannerSlide}
-      src="/images/game/banner.png"
+      src={data.thumbnail}
       mx={10}
     >
       <Box className={classes.BannerGradient}>
         <Stack gap={10} ml={75}>
           <Box className={classes.BoxGradient}>
-            <Image w={60} radius={8} src="/images/game/banner-icon.png" />
-            <Text className={classes.WhiteBold32}>승리의 여신: NIKKE</Text>
+            <Image w={60} radius={8} src="/images/temp/gray.svg" />
+            <Text className={classes.WhiteBold32}>{data.title}</Text>
           </Box>
-          <Text className={classes.WhiteLight20}>
-            니케 : 지상을 빼앗긴 인류에게 승리를 가져오는 희망의 별빛.
+          <Text className={classes.WhiteLight20} lineClamp={2} w={800}>
+            {data.description}
           </Text>
         </Stack>
       </Box>

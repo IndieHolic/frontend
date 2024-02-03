@@ -205,7 +205,7 @@ export function TagAddModal({ location }: TagAddModalProps) {
         <UnstyledButton onClick={open}>
           <Group gap={4}>
             <Text className={classes.BlackExtraLight18}>태그</Text>
-            <Text className={classes.BlackExtraLight14}>(2개 선택됨)</Text>
+            {/* <Text className={classes.BlackExtraLight14}>(2개 선택됨)</Text> */}
             <IconChevronRight size={18} stroke={1} />
           </Group>
         </UnstyledButton>

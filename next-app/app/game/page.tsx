@@ -15,10 +15,10 @@ export default function Home() {
           <CollectionTitle />
           <Collection />
         </Stack>
-        <Stack gap={17}>
+        {/* <Stack gap={17}>
           <CollectionTitle />
           <Collection />
-        </Stack>
+        </Stack> */}
       </Stack>
     </ContentWrapper>
   );

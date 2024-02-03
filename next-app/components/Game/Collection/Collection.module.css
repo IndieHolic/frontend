@@ -64,3 +64,11 @@
   box-shadow: none;
   background-color: white;
 }
+.CarouselControl[data-inactive] {
+  width: 0px;
+  height: 0px;
+  min-width: 0px;
+  min-height: 0px;
+
+  opacity: 0;
+}
