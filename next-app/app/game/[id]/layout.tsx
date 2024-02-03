@@ -21,14 +21,9 @@ export default function Layout({ children }: LayoutProps) {
         <Group align="flex-start" gap={18} mt={20}>
           <Stack gap={13}>
             <Group gap={14}>
-              <Image
-                w={60}
-                h={60}
-                radius={8}
-                src="/images/game/banner-icon.png"
-              />
+              <Image w={60} h={60} radius={8} src="/images/game/icon.webp" />
               <Text fw={200} fz={32}>
-                게임 이름
+                Hexsile
               </Text>
             </Group>
             <GamePreview />
