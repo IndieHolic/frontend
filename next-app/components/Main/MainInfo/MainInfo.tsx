@@ -23,7 +23,7 @@ export function MainInfo() {
               classNames={{ inner: classes.ButtonInner }}
               variant="outline"
               component="a"
-              href="/"
+              href="/game/agora-premium"
               rightSection={
                 <IconArrowRight size={14} color="#138BCF" stroke={2.5} />
               }
